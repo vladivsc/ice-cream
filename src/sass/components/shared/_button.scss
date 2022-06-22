@@ -1,3 +1,6 @@
+// WHITE BUTTON: button + button--white + [button--white_arrowed]
+// RED BUTTON: button + button--red + [button--red_arrowed]
+
 .button {
   @extend %link-decor;
 
@@ -29,6 +32,23 @@
     &:focus {
       background-color: $button-white-hover-bg-color;
     }
+
+    &_arrowed {
+      &::after {
+        content: '';
+
+        display: inline-block;
+        width: 8px;
+        height: 10px;
+
+        margin-left: 13px;
+
+        background-image: url('../images/arrow-red.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+      }
+    }
   }
 
   &--red {
@@ -38,6 +58,23 @@
     &:hover,
     &:focus {
       background-color: $button-red-hover-bg-color;
+    }
+
+    &_arrowed {
+      &::after {
+        content: '';
+
+        display: inline-block;
+        width: 8px;
+        height: 10px;
+
+        margin-left: 13px;
+
+        background-image: url('../images/arrow-white.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+      }
     }
   }
 }
