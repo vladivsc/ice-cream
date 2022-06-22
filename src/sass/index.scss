@@ -1,2 +1,14 @@
-@import './common';
-@import './example';
+// ------------- UTILITIES -------------
+@import './utils/normalize';
+@import './utils/variables';
+@import './utils/placeholders';
+@import './utils/mixins';
+@import './utils/global';
+@import './utils/visually-hidden';
+
+// ------------- COMPONENTS -------------
+
+// Shared Components
+
+// Header
+@import './components/header/header';

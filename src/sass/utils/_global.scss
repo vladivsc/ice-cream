@@ -1,0 +1,18 @@
+html,
+body {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: $main-font;
+  font-size: 14px;
+  color: $main-txt-color;
+  background-color: $main-bg-color;
+
+  &.mobile-menu-is-open {
+    overflow: initial;
+    @media screen and (max-width: 1279.98px) {
+      overflow: hidden;
+    }
+  }
+}
