@@ -1,0 +1,48 @@
+.section__title {
+  @extend %no-margin;
+
+  font-family: $secondary-font;
+  font-weight: 400;
+  @include font-size(34, 39);
+  letter-spacing: 0.04em;
+
+  text-align: center;
+  text-transform: uppercase;
+
+  color: $main-accent-color;
+
+  @media screen and (min-width: 768px) {
+    @include font-size(48, 55);
+  }
+
+  @media screen and (min-width: 1280px) {
+    @include font-size(58, 66);
+    letter-spacing: 0.06em;
+  }
+}
+
+.section__label {
+  @extend %no-margin;
+
+  margin-bottom: 15px;
+
+  font-family: $secondary-font;
+  font-weight: 400;
+  @include font-size(18, 21);
+
+  text-align: center;
+  text-transform: uppercase;
+
+  color: $secondary-accen-color;
+
+  @media screen and (min-width: 768px) {
+    @include font-size(26, 30);
+  }
+
+  @media screen and (min-width: 1280px) {
+    margin-bottom: 16px;
+
+    @include font-size(30, 34);
+    letter-spacing: 0.04em;
+  }
+}

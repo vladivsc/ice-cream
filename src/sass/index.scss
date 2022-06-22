@@ -9,6 +9,11 @@
 // ------------- COMPONENTS -------------
 
 // Shared Components
+@import './components/shared/section';
+@import './components/shared/container';
+@import './components/shared/image';
+@import './components/shared/section-title';
+@import './components/shared/button';
 
 // Header
 @import './components/header/header';
