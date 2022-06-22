@@ -1,2 +1,25 @@
-@import './common';
-@import './example';
+// ------------- UTILITIES -------------
+@import './utils/normalize';
+@import './utils/variables';
+@import './utils/placeholders';
+@import './utils/mixins';
+@import './utils/global';
+@import './utils/visually-hidden';
+
+// ------------- COMPONENTS -------------
+
+// Shared Components
+@import './components/shared/section';
+@import './components/shared/container';
+@import './components/shared/image';
+@import './components/shared/section-title';
+@import './components/shared/button';
+
+// Header
+@import './components/header/header';
+
+// Products
+@import './components/products/products';
+
+// Footer
+@import './components/footer/footer';

@@ -1,0 +1,11 @@
+html,
+body {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: $main-font;
+  font-weight: 500;
+  color: $main-txt-color;
+  background-color: $main-bg-color;
+}

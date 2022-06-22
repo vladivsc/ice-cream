@@ -1,0 +1,34 @@
+// ------------ FONTS ------------
+$main-font: 'DM Sans', sans-serif;
+$secondary-font: 'Titan One', cursive;
+
+// ------------ TEXT & ACCENTS COLORS ------------
+// Text Colors
+$main-txt-color: #000;
+$secondary-txt-color: #907e82;
+$white-txt-color: #fff;
+
+// Accents Colors
+$main-accent-color: #d41443;
+$secondary-accen-color: #ffa5ba;
+
+// Background Colors
+$main-bg-color: #fff;
+$secondary-bg-color: #fff5f6;
+
+// Cards Backgrouns Colors
+$card-pink-bg-color: #ffb8ca;
+$card-brown-bg-color: #f0d1a5;
+$card-green-bg-color: #c2e297;
+
+// Buttons Background Colors
+$button-white-bg-color: #fff;
+$button-white-hover-bg-color: #ecebeb;
+$button-red-hover-bg-color: #c7133e;
+
+// Mobile Menu Background Color
+$mobile-menu-bg-color: #e17992;
+
+// ------------ TRANSITION PROPS ------------
+$transition-timing: 250ms;
+$transition-function: cubic-bezier(0.4, 0, 0.2, 1);

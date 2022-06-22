@@ -1,0 +1,43 @@
+.button {
+  @extend %link-decor;
+
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  min-width: 160px;
+  height: 44px;
+  padding-left: 35px;
+  padding-right: 35px;
+
+  font-family: $main-font;
+  font-weight: 700;
+  @include font-size(16, 21);
+
+  border-width: 0;
+  border-radius: 25px;
+
+  cursor: pointer;
+
+  transition: background-color $transition-timing $transition-function;
+
+  &--white {
+    color: $main-accent-color;
+    background-color: $button-white-bg-color;
+
+    &:hover,
+    &:focus {
+      background-color: $button-white-hover-bg-color;
+    }
+  }
+
+  &--red {
+    color: $white-txt-color;
+    background-color: $main-accent-color;
+
+    &:hover,
+    &:focus {
+      background-color: $button-red-hover-bg-color;
+    }
+  }
+}
