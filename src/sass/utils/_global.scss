@@ -5,14 +5,7 @@ body {
 
 body {
   font-family: $main-font;
-  font-size: 14px;
+  font-weight: 500;
   color: $main-txt-color;
   background-color: $main-bg-color;
-
-  &.mobile-menu-is-open {
-    overflow: initial;
-    @media screen and (max-width: 1279.98px) {
-      overflow: hidden;
-    }
-  }
 }

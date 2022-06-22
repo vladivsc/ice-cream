@@ -1,23 +1,33 @@
-// Fonts
+// ------------ FONTS ------------
 $main-font: 'DM Sans', sans-serif;
 $secondary-font: 'Titan One', cursive;
 
-// Text & Accents colors
-$main-txt-color: #2e2520;
+// ------------ TEXT & ACCENTS COLORS ------------
+// Text Colors
+$main-txt-color: #000;
+$secondary-txt-color: #907e82;
 $white-txt-color: #fff;
 
-$placeholder-txt-color: rgba(171, 129, 108, 0.5);
+// Accents Colors
+$main-accent-color: #d41443;
+$secondary-accen-tcolor: #ffa5ba;
 
-$accent-main-color: #ab816c;
-$accent-hover-color: #876655;
-$accent-active-color: #674d40;
+// Background Colors
+$main-bg-color: #fff;
+$secondary-bg-color: #fff5f6;
 
-// Background colors
-$main-bg-color: #fffff9;
-$secondary-bg-color: #fef3e4;
+// Cards Backgrouns Colors
+$card-pink-bg-color: #ffb8ca;
+$card-brown-bg-color: #f0d1a5;
+$card-green-bg-color: #c2e297;
 
-$mobile-menu-bg-color: rgba(254, 243, 228, 0.9);
+// Buttons Background Colors
+$button-white-bg-color: #fff;
+$button-hover-bg-color: #ecebeb;
 
-// Transition Props
+// Mobile Menu Background Color
+$mobile-menu-bg-color: #e17992;
+
+// ------------ TRANSITION PROPS ------------
 $transition-timing: 250ms;
 $transition-function: cubic-bezier(0.4, 0, 0.2, 1);
