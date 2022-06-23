@@ -1,0 +1,26 @@
+.header {
+  @extend .container;
+
+  padding-top: 8px;
+
+  background-color: $card-pink-bg-color;
+
+  @media screen and (min-width: 768px) {
+    padding-top: 32px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    padding-top: 37px;
+  }
+}
+
+.header__top-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__top-inner-container {
+  display: flex;
+  align-items: center;
+}

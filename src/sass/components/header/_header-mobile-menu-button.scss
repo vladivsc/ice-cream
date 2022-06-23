@@ -1,0 +1,32 @@
+.header__mobile-menu-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 28px;
+  height: 28px;
+  padding: 0;
+
+  color: $main-accent-color;
+  background-color: transparent;
+  border-width: 0;
+  cursor: pointer;
+
+  transition: color $transition-timing $transition-function,
+    transform $transition-timing $transition-function;
+
+  &:hover,
+  &:focus {
+    color: $button-red-hover-bg-color;
+
+    transform: scale(1.2);
+  }
+
+  @media screen and (min-width: 1280px) {
+    display: none;
+  }
+}
+
+.header__button-icon {
+  stroke: currentColor;
+}
