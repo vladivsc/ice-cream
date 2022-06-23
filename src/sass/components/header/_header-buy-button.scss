@@ -1,0 +1,10 @@
+.header__buy-button {
+  display: none;
+
+  @media screen and (min-width: 768px) {
+    display: inline-flex;
+
+    width: 160px;
+    margin-left: 28px;
+  }
+}
