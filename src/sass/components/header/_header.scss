@@ -1,9 +1,35 @@
 .header {
-  @extend .container;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
-  padding-top: 8px;
+  height: 502px;
+  margin: 0 auto;
 
   background-color: $card-pink-bg-color;
+
+  @media screen and (min-width: 768px) {
+    width: 768px;
+    height: 416px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    width: 1280px;
+    height: 664px;
+  }
+}
+
+.header__main-container {
+  position: fixed;
+  top: 0;
+  z-index: 100;
+
+  @extend .container;
+  padding-top: 8px;
+  padding-bottom: 8px;
+
+  display: flex;
+  justify-content: space-between;
 
   @media screen and (min-width: 768px) {
     padding-top: 32px;
@@ -14,18 +40,12 @@
   }
 }
 
-.header__top-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.header__nav-container {
+.header__navigation-container {
   display: flex;
   align-items: center;
 }
 
-.header__top-inner-container {
+.header__buttons-container {
   display: flex;
   align-items: center;
 }

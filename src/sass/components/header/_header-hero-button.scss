@@ -1,0 +1,23 @@
+.hero__button {
+  position: relative;
+  z-index: 10;
+
+  height: 24px;
+  padding-left: 10px;
+  padding-right: 10px;
+
+  font-weight: 400;
+  @include font-size(8, 10);
+
+  &--red {
+    min-width: 62px;
+  }
+
+  &--white {
+    min-width: 82px;
+  }
+
+  &:not(:last-child) {
+    margin-right: 4px;
+  }
+}

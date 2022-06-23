@@ -1,0 +1,48 @@
+.header__bg-circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+
+  width: 344px;
+  height: 344px;
+
+  border-radius: 50%;
+  overflow: hidden;
+
+  background-color: $secondary-accen-color;
+
+  transform: translateY(-50%);
+
+  @media screen and (max-width: 767.98px) {
+    transform: translate(-36%, -50%);
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 333px;
+    height: 333px;
+
+    left: 248px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    width: 534px;
+    height: 534px;
+
+    left: 517px;
+  }
+}
+
+.header__bg-icecream {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  z-index: 2;
+
+  width: 171px;
+  height: 410px;
+
+  @media screen and (max-width: 767.98px) {
+    transform: translateX(-24%);
+  }
+}

@@ -1,8 +1,8 @@
 <header class="header">
-  <div class="header__top-container">
-    <div class="header__nav-container">
+  <div class="header__main-container">
+    <div class="header__navigation-container">
       <a class="header__logo" href="./" aria-label="Logotype Icecream">
-        <svg width="199" height="50">
+        <svg class="header__logo-icon" width="199" height="50">
           <use href="./images/svg/sprite.svg#logo"></use>
         </svg>
       </a>
@@ -26,7 +26,7 @@
         </ul>
       </nav>
     </div>
-    <div class="header__top-inner-container">
+    <div class="header__buttons-container">
       <button
         class="header__mobile-menu-button"
         type="button"
@@ -49,13 +49,23 @@
     </div>
   </div>
   <div class="header__hero hero">
-    <h1 class="hero__title">
-      ice cream<br />made with<br />
-      <span class="hero__title--red">passion</span>
-    </h1>
-    <a class="button button--red hero__button" href="#products">Products</a>
-    <a class="button button--white hero__button" href="#how-its-made"
-      >How it's made?</a
-    >
+    <div class="header__bg-circle"></div>
+    <div class="header__bg-icecream"></div>
+    <div class="hero__content-container">
+      <h1 class="hero__title">
+        ice cream<br />made with<br />
+        <span class="hero__title--red">passion</span>
+      </h1>
+      <a
+        class="button button--red hero__button hero__button--red"
+        href="#products"
+        >Products</a
+      >
+      <a
+        class="button button--white hero__button hero__button--white"
+        href="#how-its-made"
+        >How it's made?</a
+      >
+    </div>
   </div>
 </header>

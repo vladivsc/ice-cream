@@ -1,4 +1,15 @@
 .hero {
-  padding-top: 136px;
-  padding-bottom: 158px;
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  flex-grow: 1;
+
+  overflow: hidden;
+}
+
+.hero__content-container {
+  @extend .container;
 }
