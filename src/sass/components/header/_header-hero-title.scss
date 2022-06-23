@@ -1,0 +1,17 @@
+.hero__title {
+  margin-bottom: 20px;
+
+  font-family: $secondary-font;
+  font-weight: 400;
+  @include font-size(26, 30);
+  letter-spacing: 0.04em;
+
+  color: $white-txt-color;
+  text-transform: uppercase;
+
+  &--red {
+    @include font-size(48, 46);
+
+    color: $main-accent-color;
+  }
+}
