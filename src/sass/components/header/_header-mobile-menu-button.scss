@@ -1,17 +1,32 @@
 .mobile-menu-button {
   position: relative;
-  z-index: 10;
+  z-index: 120;
 
   display: inline-flex;
 
   padding-top: 16px;
   padding-bottom: 16px;
-  padding-left: 16px;
-  padding-right: 0;
+  padding-left: 8px;
+  padding-right: 8px;
 
   background-color: transparent;
   border: transparent;
   cursor: pointer;
+
+  transform: translateX(8px);
+
+  transition: transform $transition-timing $transition-function;
+
+  &:hover,
+  &:focus {
+    transform: scale(1.2) translateX(8px);
+  }
+
+  @media screen and (min-width: 768px) {
+    &.is-open {
+      transform: translate(200px, -20px);
+    }
+  }
 
   @media screen and (min-width: 1280px) {
     display: none;
@@ -50,12 +65,12 @@
   &--bottom {
     background-color: $main-accent-color;
 
-    .mobile-menu-button:hover &,
-    .mobile-menu-button:focus & {
-      background-color: $button-red-hover-bg-color;
+    .mobile-menu-button.is-open & {
+      background-color: $white-txt-color;
     }
 
-    .mobile-menu-button:active & {
+    .mobile-menu-button:hover &,
+    .mobile-menu-button:focus & {
       background-color: $button-red-hover-bg-color;
     }
   }
