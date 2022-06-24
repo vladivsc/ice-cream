@@ -9,19 +9,19 @@
       <nav class="header__navigation head-nav">
         <ul class="head-nav__list">
           <li class="head-nav__item">
-            <a class="head-nav__link" href="">Home</a>
+            <a class="head-nav__link" href="#home">Home</a>
           </li>
           <li class="head-nav__item">
-            <a class="head-nav__link" href="">About us</a>
+            <a class="head-nav__link" href="#products">Our products</a>
           </li>
           <li class="head-nav__item">
-            <a class="head-nav__link" href="">How it's made?</a>
+            <a class="head-nav__link" href="#about">How it's made?</a>
           </li>
           <li class="head-nav__item">
-            <a class="head-nav__link" href="">Our products</a>
+            <a class="head-nav__link" href="#gallery">Gallery</a>
           </li>
           <li class="head-nav__item">
-            <a class="head-nav__link" href="">Contact</a>
+            <a class="head-nav__link" href="#contacts">Contact</a>
           </li>
         </ul>
       </nav>
@@ -51,18 +51,47 @@
         class="button button--white button--white_arrowed header__buy-button"
         type="button"
         aria-expanded="false"
-        aria-controls="modal-backdrop"
+        aria-controls="!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+        data-buy-button
       >
-        Buy now
+        <strong>Buy now</strong>
       </button>
     </div>
     <div
       class="header__mobile-menu mobile-menu"
       id="mobile-menu"
       data-mobile-menu
-    ></div>
+    >
+      <button
+        class="button button--white button--white_arrowed mobile-menu__buy-button"
+        type="button"
+        aria-expanded="false"
+        aria-controls="!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+      >
+        <strong>Buy now</strong>
+      </button>
+      <nav class="mobile-menu__navigation mob-nav">
+        <ul class="mob-nav__list" data-mobile-menu-list>
+          <li class="mob-nav__item">
+            <a class="mob-nav__link" href="#home">Home</a>
+          </li>
+          <li class="mob-nav__item">
+            <a class="mob-nav__link" href="#products">Our products</a>
+          </li>
+          <li class="mob-nav__item">
+            <a class="mob-nav__link" href="#about">How it's made?</a>
+          </li>
+          <li class="mob-nav__item">
+            <a class="mob-nav__link" href="#gallery">Gallery</a>
+          </li>
+          <li class="mob-nav__item">
+            <a class="mob-nav__link" href="#contacts">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
   </div>
-  <div class="header__hero hero" id="home">
+  <section class="header__hero hero" id="home">
     <div class="header__bg-circle"></div>
     <div class="header__bg-icecream"></div>
     <div class="hero__content-container">
@@ -77,9 +106,9 @@
       >
       <a
         class="button button--white hero__button hero__button--white"
-        href="#how-its-made"
+        href="#about"
         >How it's made?</a
       >
     </div>
-  </div>
+  </section>
 </header>

@@ -1,6 +1,6 @@
 .mobile-menu-button {
   position: relative;
-  z-index: 120;
+  z-index: 2;
 
   display: inline-flex;
 
@@ -19,12 +19,12 @@
 
   &:hover,
   &:focus {
-    transform: scale(1.2) translateX(8px);
+    transform: translateX(8px);
   }
 
   @media screen and (min-width: 768px) {
     &.is-open {
-      transform: translate(200px, -20px);
+      transform: translate(200px, -28px);
     }
   }
 
