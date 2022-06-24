@@ -1,20 +1,21 @@
-.contacts {
-  background-color: $secondary-bg-color;
+.title-shadow {
+  display: none;
+}
 
+.contacts {
+  background-image: linear-gradient(
+    to bottom,
+    #e5e5e5 24%,
+    $secondary-bg-color 15%,
+    $secondary-bg-color 40%
+  );
+  height: 1500px;
   @extend %no-margin;
   padding-top: 60px;
   padding-bottom: 60px;
   display: block;
   flex-wrap: wrap;
   gap: 30px;
-  max-width: 280px;
-  @media screen and (min-width: 760px) {
-    max-width: 224px;
-    width: calc((100% - 32px) / 3);
-    margin-left: 0px;
-    flex-wrap: wrap;
-    gap: 30px;
-  }
 
   &__card {
     @extend %no-margin;
@@ -43,25 +44,21 @@
   width: 130px;
   margin: 0px;
   margin-bottom: 20px;
-  width: 80px;
   background: $card-green-bg-color;
   border-radius: 4px;
 }
 .contacts__card-one {
   @extend %no-margin;
-  margin: 0px;
   margin-bottom: 20px;
   width: 80px;
   background: $card-brown-bg-color;
   border-radius: 4px;
 }
 .contacts__title {
+  @extend %no-margin;
+  @include font-size(12, 18);
+  text-align: center;
   font-weight: 500;
-  font-size: 12px;
-  line-height: 186%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   letter-spacing: 0.04em;
   color: #ffffff;
 }
@@ -79,18 +76,17 @@
 .contacts__place {
   margin-bottom: 8px;
   @extend %no-margin;
-  font-size: 12px;
-  line-height: 186%;
+  @include font-size(12, 22);
+
   letter-spacing: 0.04em;
   color: $main-txt-color;
 }
 .contacts__text {
   color: $secondary-txt-color;
   @extend %no-margin;
+  @include font-size(12, 18);
   font-style: normal;
   font-weight: 500;
-  font-size: 12px;
-  line-height: 18px;
 }
 
 .contacts__line {
@@ -102,14 +98,12 @@
 
 .contacts__work {
   @extend %no-margin;
-  font-size: 12px;
-  line-height: 186%;
+  @include font-size(12, 22);
 }
 .contacts__time {
   color: $secondary-accen-color;
   @extend %no-margin;
-  font-size: 12px;
-  line-height: 186%;
+  @include font-size(12, 22);
 }
 
 .contacts__social {
@@ -120,6 +114,5 @@
   color: $secondary-txt-color;
   @extend %link-decor;
   @extend %no-margin;
-  font-size: 12px;
-  line-height: 18px;
+  @include font-size(12, 18);
 }
