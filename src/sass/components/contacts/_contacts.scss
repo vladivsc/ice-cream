@@ -1,0 +1,125 @@
+.contacts {
+  background-color: $secondary-bg-color;
+
+  @extend %no-margin;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  display: block;
+  flex-wrap: wrap;
+  gap: 30px;
+  max-width: 280px;
+  @media screen and (min-width: 760px) {
+    max-width: 224px;
+    width: calc((100% - 32px) / 3);
+    margin-left: 0px;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+
+  &__card {
+    @extend %no-margin;
+    @extend %list;
+    margin-bottom: 20px;
+    flex-direction: column;
+    display: flex;
+    flex-wrap: wrap;
+    background: #ffffff;
+    box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
+    border-radius: 24px;
+  }
+}
+.contacts__card:nth-child(1) {
+  margin-left: 0px;
+}
+.contacts__position {
+  @extend %no-margin;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  padding-left: 32px;
+  padding-right: 32px;
+}
+.contacts__card-two {
+  @extend %no-margin;
+  width: 130px;
+  margin: 0px;
+  margin-bottom: 20px;
+  width: 80px;
+  background: $card-green-bg-color;
+  border-radius: 4px;
+}
+.contacts__card-one {
+  @extend %no-margin;
+  margin: 0px;
+  margin-bottom: 20px;
+  width: 80px;
+  background: $card-brown-bg-color;
+  border-radius: 4px;
+}
+.contacts__title {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 186%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 0.04em;
+  color: #ffffff;
+}
+
+.contacts__item {
+  margin-bottom: 24px;
+}
+.contacts__item:nth-child(4) {
+  margin-bottom: 8px;
+}
+
+.contacts__group {
+  padding: 40px, 32px;
+}
+.contacts__place {
+  margin-bottom: 8px;
+  @extend %no-margin;
+  font-size: 12px;
+  line-height: 186%;
+  letter-spacing: 0.04em;
+  color: $main-txt-color;
+}
+.contacts__text {
+  color: $secondary-txt-color;
+  @extend %no-margin;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.contacts__line {
+  margin-bottom: 24px;
+  display: flex;
+  height: 0px;
+  border: 1px solid #e1e1e1;
+}
+
+.contacts__work {
+  @extend %no-margin;
+  font-size: 12px;
+  line-height: 186%;
+}
+.contacts__time {
+  color: $secondary-accen-color;
+  @extend %no-margin;
+  font-size: 12px;
+  line-height: 186%;
+}
+
+.contacts__social {
+  @extend %link-decor;
+}
+
+.contacts__link {
+  color: $secondary-txt-color;
+  @extend %link-decor;
+  @extend %no-margin;
+  font-size: 12px;
+  line-height: 18px;
+}
