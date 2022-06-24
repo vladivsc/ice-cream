@@ -1,0 +1,11 @@
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 9;
+
+  width: 100vw;
+  height: 100vh;
+
+  background-color: $mobile-menu-bg-color;
+}
