@@ -2,14 +2,14 @@
   display: none;
 }
 
-.contacts {
+.contact {
   background-image: linear-gradient(
     to bottom,
-    #e5e5e5 24%,
+    $main-bg-color 24%,
     $secondary-bg-color 15%,
     $secondary-bg-color 40%
   );
-  height: 1500px;
+
   @extend %no-margin;
   padding-top: 60px;
   padding-bottom: 60px;
@@ -22,6 +22,10 @@
     @extend %list;
     margin-bottom: 20px;
     flex-direction: column;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-right: 32px;
+    padding-left: 32px;
     display: flex;
     flex-wrap: wrap;
     background: #ffffff;
@@ -29,17 +33,23 @@
     border-radius: 24px;
   }
 }
-.contacts__card:nth-child(1) {
-  margin-left: 0px;
+.contact__card:nth-last-child(3) {
+  margin-bottom: 32px;
 }
-.contacts__position {
+
+.contacts__list {
+  padding: 0%;
+  margin: 0%;
+}
+
+.contact__position {
   @extend %no-margin;
   padding-top: 40px;
   padding-bottom: 40px;
   padding-left: 32px;
   padding-right: 32px;
 }
-.contacts__card-two {
+.contact__card-two {
   @extend %no-margin;
   width: 130px;
   margin: 0px;
@@ -47,14 +57,14 @@
   background: $card-green-bg-color;
   border-radius: 4px;
 }
-.contacts__card-one {
+.contact__card-one {
   @extend %no-margin;
   margin-bottom: 20px;
   width: 80px;
   background: $card-brown-bg-color;
   border-radius: 4px;
 }
-.contacts__title {
+.contact__title {
   @extend %no-margin;
   @include font-size(12, 18);
   text-align: center;
@@ -63,17 +73,18 @@
   color: #ffffff;
 }
 
-.contacts__item {
+.contact__item {
+  width: 179px;
   margin-bottom: 24px;
 }
-.contacts__item:nth-child(4) {
+.contact__item:nth-child(4) {
   margin-bottom: 8px;
 }
 
-.contacts__group {
+.contact__group {
   padding: 40px, 32px;
 }
-.contacts__place {
+.contact__place {
   margin-bottom: 8px;
   @extend %no-margin;
   @include font-size(12, 22);
@@ -81,7 +92,7 @@
   letter-spacing: 0.04em;
   color: $main-txt-color;
 }
-.contacts__text {
+.contact__text {
   color: $secondary-txt-color;
   @extend %no-margin;
   @include font-size(12, 18);
@@ -89,30 +100,42 @@
   font-weight: 500;
 }
 
-.contacts__line {
+.contact__line {
   margin-bottom: 24px;
   display: flex;
   height: 0px;
   border: 1px solid #e1e1e1;
 }
 
-.contacts__work {
+.contact__work {
   @extend %no-margin;
   @include font-size(12, 22);
 }
-.contacts__time {
+.contact__time {
   color: $secondary-accen-color;
   @extend %no-margin;
   @include font-size(12, 22);
 }
 
-.contacts__social {
+.contact__social {
   @extend %link-decor;
 }
 
-.contacts__link {
+.contact__link {
   color: $secondary-txt-color;
   @extend %link-decor;
   @extend %no-margin;
   @include font-size(12, 18);
+}
+
+.contact__buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.contact__buttons {
+  margin-bottom: 12px;
+}
+.contact__buttons:nth-last-child(1) {
+  margin-bottom: 0px;
 }
