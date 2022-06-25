@@ -36,10 +36,16 @@
   padding-top: 8px;
   padding-bottom: 8px;
 
+  transition: transform $transition-timing $transition-function;
+
   @media screen and (min-width: 768px) {
     padding-top: 32px;
     padding-left: 32px;
     padding-right: 32px;
+
+    &.transformed-up {
+      transform: translateY(-24px);
+    }
   }
 
   @media screen and (min-width: 1200px) {
@@ -47,6 +53,10 @@
     padding-top: 37px;
     padding-left: 16px;
     padding-right: 16px;
+
+    &.transformed-up {
+      transform: translateY(-29px);
+    }
   }
 }
 
@@ -59,7 +69,7 @@
   width: 100%;
   height: 100%;
 
-  background-color: #ffb8caa0;
+  background: linear-gradient(to bottom, #ffb8ca, #ffb8caa0 80%, #ffb8ca00);
   backdrop-filter: blur(6px);
 
   opacity: 0;
