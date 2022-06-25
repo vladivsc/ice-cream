@@ -2,20 +2,17 @@
   @extend %list;
 }
 
-.link-decor {
+.link {
   @extend %link-decor;
 }
 
-ul {
+ul,
+p {
   @extend %no-margin;
 }
 
 li {
   padding: 0;
-}
-
-p {
-  @extend %no-margin;
 }
 
 .footer-section {
@@ -32,7 +29,7 @@ p {
   margin: 0px;
 }
 
-.footer-text {
+.footer-main-text {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -86,6 +83,13 @@ p {
   background-color: #fea5bb;
 
   border-radius: 50%;
+
+  transition: background-color $transition-timing $transition-function;
+
+  &:hover,
+  &:focus {
+    background-color: $main-accent-color;
+  }
 }
 
 .footer-socials__icon {
@@ -110,7 +114,7 @@ p {
   font-weight: 700;
   @include font-size(12, 22);
 
-  color: #d41443;
+  color: $main-accent-color;
 }
 
 .footer-copyright {
