@@ -6,7 +6,23 @@
   @extend %link-decor;
 }
 
+ul {
+  @extend %no-margin;
+}
+
+li {
+  padding: 0;
+}
+
+.footer-section {
+  padding-top: 40px;
+  padding-bottom: 3px;
+}
+
 .footer-container {
+  display: flex;
+  flex-direction: column;
+
   margin: 0px;
 }
 
@@ -57,4 +73,16 @@
 
 .footer-socials__icon {
   fill: $main-bg-color;
+}
+
+.footer-copyright {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-copyright__text {
+  width: 150px;
+
+  text-align: center;
 }
