@@ -6,6 +6,10 @@
   @extend %link-decor;
 }
 
+.footer-container {
+  margin: 0px;
+}
+
 .footer-text {
   display: flex;
   flex-direction: column;
