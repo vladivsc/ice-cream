@@ -52,7 +52,13 @@ p {
   text-align: left;
 }
 
-.footer-socials {
+.footer-socials:after {
+  display: block;
+  content: ' ';
+
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+
   border-bottom: 1px solid #e1e1e1;
 }
 
@@ -87,6 +93,9 @@ p {
 }
 
 .footer-contacts {
+  display: flex;
+  justify-content: flex-end;
+
   padding-bottom: 40px;
 }
 
