@@ -29,7 +29,7 @@
   @extend %list;
 }
 
-.contact-card:not(:last-child) {
+.contact-card:last-child {
   margin-bottom: 32px;
 }
 
@@ -157,10 +157,18 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  @extend %list;
 }
-.contact__buttons {
+// .contact__buttons:nth-last-child(1) {
+//   margin-bottom: 0px;
+// }
+.button--white_arrowed_length {
+  width: 170px;
+}
+
+.contact__buttons-tupe {
   margin-bottom: 12px;
 }
-.contact__buttons:nth-last-child(1) {
-  margin-bottom: 0px;
+.contact__buttons-tupe:last-child {
+  margin-bottom: 0;
 }
