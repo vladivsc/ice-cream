@@ -43,5 +43,18 @@
   }
 }
 
+.footer-socials__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 32px;
+  height: 32px;
+
+  border-radius: 50%;
+}
+
 .footer-socials__icon {
+  background-color: #fea5bb;
+  fill: $main-bg-color;
 }
