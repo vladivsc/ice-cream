@@ -1,6 +1,3 @@
-.contact__cards {
-  @extend %list;
-}
 .contact {
   background-image: linear-gradient(
     to bottom,
@@ -9,60 +6,38 @@
     $secondary-bg-color 40%
   );
 
+  @extend .section;
+}
+
+.contact-card {
   @extend %no-margin;
-  padding-top: 60px;
-  padding-bottom: 60px;
-  display: block;
-  flex-wrap: wrap;
-  gap: 30px;
-
-  &__card {
-    @extend %no-margin;
-    @extend %list;
-    margin-bottom: 20px;
-    flex-direction: column;
-    padding-top: 40px;
-    padding-bottom: 40px;
-    padding-right: 32px;
-    padding-left: 32px;
-    display: flex;
-    flex-wrap: wrap;
-    background: #ffffff;
-    box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
-    border-radius: 24px;
-  }
-}
-.contact__card:nth-last-child(3) {
-  margin-bottom: 32px;
-}
-
-.card__item {
-  border-top: 1px solid #e1e1e1;
-  padding: 0%;
-  margin: 0%;
-  padding-top: 24px;
-}
-
-.contact__position {
-  @extend %no-margin;
+  @extend %list;
+  margin-bottom: 20px;
+  flex-direction: column;
   padding-top: 40px;
   padding-bottom: 40px;
-  padding-left: 32px;
   padding-right: 32px;
+  padding-left: 32px;
+  display: flex;
+  flex-wrap: wrap;
+  background: #ffffff;
+  box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
+  border-radius: 24px;
 }
-.contact__card-two {
-  @extend %no-margin;
-  width: 130px;
-  margin: 0px;
-  margin-bottom: 20px;
-  background: $card-green-bg-color;
-  border-radius: 4px;
+
+.contact__cards {
+  @extend %list;
+}
+
+.contact-card:not(:last-child) {
+  margin-bottom: 32px;
 }
 
 .contact-card__title {
   @extend %no-margin;
 
   position: relative;
+  top: 1px;
   z-index: 1;
 
   display: flex;
@@ -74,25 +49,22 @@
   padding-left: 25px;
   padding-right: 25px;
 
-  @include font-size(12, 22);
+  @include font-size(12, 16);
   font-weight: 500;
   letter-spacing: 0.04em;
   color: $white-txt-color;
-
-  overflow: hidden;
 
   &::before {
     content: '';
 
     position: absolute;
+    top: -1px;
     z-index: -1;
 
     width: 100%;
-    height: 16px;
+    height: 100%;
 
     border-radius: 4px;
-
-    transform: translateY(-1px);
   }
 
   &--brown {
@@ -107,58 +79,78 @@
     }
   }
 }
-// .contact__card-one {
-//   @extend %no-margin;
-//   margin-bottom: 20px;
-// }
 
-.contact__item {
-  width: 179px;
+.contact-card__item {
+  padding: 0;
+}
+
+.contact-card__item:not(:first-child) {
+  padding-top: 24px;
+}
+
+.contact-card__item:not(:last-child) {
   padding-bottom: 24px;
+
+  border-bottom: 1px solid #e1e1e1;
 }
 
-.contact__item:nth-child(4) {
+.contact-card__shedule-item {
+  max-width: 180px;
+}
+
+.contact-card__shedule-item:not(:last-child) {
   margin-bottom: 8px;
 }
 
-.contact__group {
-  padding: 40px, 32px;
-}
-.contact__place {
-  margin-bottom: 8px;
+.contact-card__place {
   @extend %no-margin;
-  @include font-size(12, 22);
 
+  margin-bottom: 8px;
+
+  @include font-size(12, 22);
   letter-spacing: 0.04em;
+
   color: $main-txt-color;
 }
-.contact__text {
-  color: $secondary-txt-color;
+
+.contact-card__text {
   @extend %no-margin;
+
+  max-width: 180px;
+
   @include font-size(12, 18);
-  font-style: normal;
   font-weight: 500;
-}
 
-.contact__work {
-  @extend %no-margin;
-  @include font-size(12, 22);
-}
-.contact__time {
-  color: $secondary-accen-color;
-  @extend %no-margin;
-  @include font-size(12, 22);
-}
-
-.contact__social {
-  @extend %link-decor;
-}
-
-.contact__link {
   color: $secondary-txt-color;
-  @extend %link-decor;
+}
+
+.contact-card__days {
   @extend %no-margin;
+
+  @include font-size(12, 22);
+}
+
+.contact-card__time {
+  @extend %no-margin;
+
+  @include font-size(12, 22);
+
+  color: $secondary-accen-color;
+}
+
+.contact-card__link {
+  @extend %link-decor;
+
   @include font-size(12, 18);
+
+  color: $secondary-txt-color;
+
+  transition: color $transition-timing $transition-function;
+
+  &:hover,
+  &:focus {
+    color: $main-accent-color;
+  }
 }
 
 .contact__buttons {
