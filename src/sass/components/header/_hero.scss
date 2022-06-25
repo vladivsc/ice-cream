@@ -12,6 +12,7 @@
 
 .hero__content-container {
   width: 100%;
+  max-width: 1200px;
 
   margin: 0 auto;
   padding-left: 20px;
@@ -23,7 +24,6 @@
   }
 
   @media screen and (min-width: 1200px) {
-    width: 1200px;
     padding-left: 16px;
     padding-right: 16px;
   }
