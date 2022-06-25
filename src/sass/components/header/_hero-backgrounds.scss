@@ -18,14 +18,16 @@
     transform: translate(-36%, -50%);
   }
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 768px) and (max-width: 1199.98px) {
     width: 333px;
     height: 333px;
 
-    left: 248px;
+    left: 50%;
+
+    transform: translate(-40%, -50%);
   }
 
-  @media screen and (min-width: 1280px) {
+  @media screen and (min-width: 1200px) {
     width: 534px;
     height: 534px;
 
