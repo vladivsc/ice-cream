@@ -1,3 +1,6 @@
+.contact__cards {
+  @extend %list;
+}
 .contact {
   background-image: linear-gradient(
     to bottom,
@@ -33,9 +36,11 @@
   margin-bottom: 32px;
 }
 
-.contacts__list {
+.card__item {
+  border-top: 1px solid #e1e1e1;
   padding: 0%;
   margin: 0%;
+  padding-top: 24px;
 }
 
 .contact__position {
@@ -53,26 +58,42 @@
   background: $card-green-bg-color;
   border-radius: 4px;
 }
-.contact__card-one {
-  @extend %no-margin;
-  margin-bottom: 20px;
-  width: 80px;
-  background: $card-brown-bg-color;
-  border-radius: 4px;
-}
-.contact__title {
+
+.contact-card__title {
+  position: relative;
   @extend %no-margin;
   @include font-size(12, 18);
   text-align: center;
   font-weight: 500;
   letter-spacing: 0.04em;
-  color: #ffffff;
+  color: #000;
+  display: block;
+  width: 80px;
+  height: 16px;
+  &::before {
+    content: '';
+
+    background: $card-brown-bg-color;
+    border-radius: 4px;
+    display: block;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
 }
+// .contact__card-one {
+//   @extend %no-margin;
+//   margin-bottom: 20px;
+// }
 
 .contact__item {
   width: 179px;
-  margin-bottom: 24px;
+  padding-bottom: 24px;
 }
+
 .contact__item:nth-child(4) {
   margin-bottom: 8px;
 }
@@ -94,13 +115,6 @@
   @include font-size(12, 18);
   font-style: normal;
   font-weight: 500;
-}
-
-.contact__line {
-  margin-bottom: 24px;
-  display: flex;
-  height: 0px;
-  border: 1px solid #e1e1e1;
 }
 
 .contact__work {
