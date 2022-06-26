@@ -1,0 +1,43 @@
+.head-nav {
+  display: none;
+
+  @media screen and (min-width: 1200px) {
+    display: block;
+
+    margin-left: 128px;
+  }
+}
+
+.head-nav__list {
+  @extend %list;
+
+  display: flex;
+  align-items: center;
+}
+
+.head-nav__item:not(:last-child) {
+  margin-right: 35px;
+}
+
+.head-nav__link {
+  @extend %link-decor;
+
+  display: inline-block;
+
+  font-weight: 700;
+  @include font-size(16, 21);
+
+  color: $white-txt-color;
+
+  outline-offset: 2px;
+
+  transition: color $transition-timing $transition-function,
+    transform $transition-timing $transition-function;
+
+  &:hover,
+  &:focus {
+    color: $main-accent-color;
+
+    transform: scale(1.05);
+  }
+}

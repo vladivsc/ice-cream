@@ -1,0 +1,40 @@
+.hero__title {
+  @extend %no-margin;
+
+  position: relative;
+  z-index: 10;
+
+  margin-bottom: 20px;
+
+  font-family: $secondary-font;
+  font-weight: 400;
+  @include font-size(26, 30);
+  letter-spacing: 0.04em;
+
+  color: $white-txt-color;
+  text-transform: uppercase;
+
+  &--red {
+    @include font-size(48, 46);
+
+    color: $main-accent-color;
+  }
+
+  @media screen and (min-width: 768px) {
+    @include font-size(22, 25);
+
+    &--red {
+      @include font-size(34, 31);
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 24px;
+
+    @include font-size(38, 44);
+
+    &--red {
+      @include font-size(58, 52);
+    }
+  }
+}

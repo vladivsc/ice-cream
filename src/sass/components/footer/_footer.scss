@@ -1,0 +1,141 @@
+.footer {
+  @extend .section;
+
+  padding-top: 20px;
+  padding-bottom: 0;
+
+  background-color: $secondary-bg-color;
+}
+
+.footer__container {
+  @extend .container;
+
+  margin-bottom: 30px;
+}
+
+.footer__label {
+  @extend %no-margin;
+  @extend .section__label;
+
+  width: 234px;
+
+  text-align: left;
+}
+
+.footer__title {
+  @extend %no-margin;
+  @extend .section__title;
+
+  width: 234px;
+
+  text-align: left;
+
+  margin-bottom: 40px;
+}
+
+.socials__list {
+  @extend %no-margin;
+  @extend %list;
+
+  display: flex;
+  justify-content: flex-end;
+
+  margin-bottom: 30px;
+}
+
+.socials__item:not(:last-child) {
+  margin-right: 28px;
+}
+
+.socials__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 32px;
+  height: 32px;
+
+  background-color: #fea5bb;
+
+  border-radius: 50%;
+
+  transition: background-color $transition-timing $transition-function,
+    transform $transition-timing $transition-function;
+
+  &:hover,
+  &:focus {
+    background-color: $main-accent-color;
+
+    transform: scale(1.2);
+  }
+}
+
+.socials__icon {
+  fill: $main-bg-color;
+}
+
+.footer__contacts {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.footer__contacts-text {
+  margin-right: 4px;
+
+  font-weight: 700;
+  @include font-size(12, 22);
+}
+
+.footer__contacts-link {
+  @extend %link-decor;
+
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  font-weight: 700;
+  @include font-size(12, 22);
+
+  color: $main-accent-color;
+
+  transform-origin: left;
+
+  transition: color $transition-timing $transition-function,
+    transform $transition-timing $transition-function;
+
+  &:hover,
+  &:focus {
+    color: #b42143;
+
+    transform: scale(1.1);
+  }
+}
+
+.footer__copyright {
+  width: 100%;
+
+  padding-top: 16px;
+  padding-bottom: 3px;
+
+  border-top: 1px solid #e1e1e1;
+}
+
+.footer__copyright-container {
+  @extend .container;
+
+  display: flex;
+  justify-content: center;
+}
+
+.footer__copyright-text {
+  @extend %no-margin;
+
+  width: 150px;
+
+  text-align: center;
+
+  font-weight: 700;
+  @include font-size(14, 21);
+
+  color: $secondary-txt-color;
+}
