@@ -7,6 +7,24 @@
     $secondary-bg-color 15%,
     $secondary-bg-color 40%
   );
+
+  @media screen and (min-width: 768px) {
+    background-image: linear-gradient(
+      to bottom,
+      $main-bg-color 40%,
+      $secondary-bg-color 15%,
+      $secondary-bg-color 40%
+    );
+  }
+
+  @media screen and (min-width: 1280px) {
+    background-image: linear-gradient(
+      to bottom,
+      $main-bg-color 20%,
+      $secondary-bg-color 15%,
+      $secondary-bg-color 40%
+    );
+  }
 }
 
 .contact__cards {
@@ -42,10 +60,15 @@
   padding-bottom: 40px;
   padding-right: 32px;
   padding-left: 32px;
+  margin-bottom: 20px;
 
   background: #ffffff;
   box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
   border-radius: 24px;
+
+  @media screen and (min-width: 360px) {
+    width: calc((100% - 0px) / 1);
+  }
 
   @media screen and (min-width: 768px) {
     width: calc((100% - 32px) / 3);
@@ -77,6 +100,14 @@
     font-weight: 500;
     letter-spacing: 0.04em;
     color: $white-txt-color;
+
+    @media screen and (min-width: 768px) {
+      @include font-size(16, 30);
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      padding-left: 18px;
+      padding-right: 18px;
+    }
 
     &::before {
       content: '';
@@ -116,6 +147,14 @@
     letter-spacing: 0.04em;
 
     color: $main-txt-color;
+
+    @media screen and (min-width: 768px) {
+      @include font-size(14, 26);
+    }
+
+    @media screen and (min-width: 1280px) {
+      @include font-size(16, 30);
+    }
   }
 
   &__text {
@@ -127,6 +166,18 @@
     font-weight: 500;
 
     color: $secondary-txt-color;
+
+    @media screen and (min-width: 768px) {
+      @include font-size(14, 23);
+    }
+
+    @media screen and (min-width: 1280px) {
+      @include font-size(16, 29);
+
+      max-width: 244px;
+
+      letter-spacing: 0.04em;
+    }
   }
 
   &__shedule-item {
@@ -136,6 +187,15 @@
   &__days {
     @extend %no-margin;
     @include font-size(12, 22);
+
+    @media screen and (min-width: 768px) {
+      @include font-size(14, 26);
+    }
+
+    @media screen and (min-width: 1280px) {
+      @include font-size(16, 30);
+      letter-spacing: 0.04em;
+    }
   }
 
   &__time {
@@ -144,6 +204,14 @@
     @include font-size(12, 22);
 
     color: $secondary-accen-color;
+
+    @media screen and (min-width: 768px) {
+      @include font-size(14, 26);
+    }
+
+    @media screen and (min-width: 1280px) {
+      @include font-size(16, 30);
+    }
   }
   &__link {
     @extend %link-decor;
@@ -154,11 +222,23 @@
 
     transition: color $transition-timing $transition-function;
 
+    @media screen and (min-width: 768px) {
+      @include font-size(14, 26);
+    }
+
+    @media screen and (min-width: 1280px) {
+      @include font-size(16, 29);
+    }
+
     &:hover,
     &:focus {
       color: $main-accent-color;
     }
   }
+}
+
+.contact-card:last-child {
+  margin-bottom: 32px;
 }
 
 .contact-card__item:not(:first-child) {
