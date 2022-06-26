@@ -11,7 +11,7 @@
   @media screen and (min-width: 768px) {
     background-image: linear-gradient(
       to bottom,
-      $main-bg-color 40%,
+      $main-bg-color 43%,
       $secondary-bg-color 15%,
       $secondary-bg-color 40%
     );
@@ -31,12 +31,14 @@
   @extend %list;
 
   margin: auto;
+  margin-bottom: 32px;
 
   @media screen and (min-width: 768px) {
     flex-wrap: nowrap;
     justify-content: center;
     display: flex;
     gap: 32px;
+    margin-bottom: 60px;
   }
 
   @media screen and (min-width: 1280px) {
@@ -71,13 +73,16 @@
   }
 
   @media screen and (min-width: 768px) {
-    width: calc((100% - 32px) / 3);
+    width: calc((100% - 94px) / 3);
     width: 224px;
-    margin-bottom: 60px;
+
+    margin-bottom: 0px;
   }
-  @media screen and (min-width: 1280px) {
-    width: calc((100% - 32px) / 3);
+  @media screen and (min-width: 1200px) {
+    width: calc((100% - 94px) / 3);
     width: 368px;
+
+    margin-bottom: 0px;
   }
 
   &__title {
@@ -237,16 +242,13 @@
   }
 }
 
-.contact-card:last-child {
-  margin-bottom: 32px;
-}
-
 .contact-card__item:not(:first-child) {
   padding-top: 24px;
 }
 
 .contact-card__item:not(:last-child) {
   padding-bottom: 24px;
+
   border-bottom: 1px solid #e1e1e1;
 }
 
@@ -260,6 +262,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media screen and (min-width: 768px) {
+    align-items: normal;
+    flex-direction: row;
+    justify-content: center;
+  }
 }
 
 .button--white_arrowed_length {
@@ -268,7 +276,33 @@
 
 .contact__buttons-tupe {
   margin-bottom: 12px;
+
+  @media screen and (min-width: 768px) {
+    margin-right: 14px;
+    margin-bottom: 0px;
+  }
 }
 .contact__buttons-tupe:last-child {
   margin-bottom: 0;
+  margin-right: 0;
+}
+
+.button--red__size {
+  @media screen and (min-width: 768px) {
+    width: 191px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    width: 198px;
+  }
+}
+
+.button--white__size {
+  @media screen and (min-width: 768px) {
+    width: 174px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    width: 168px;
+  }
 }
