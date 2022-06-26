@@ -18,6 +18,45 @@
 
 .advantages__item {
   width: 230px;
+
+  &::before {
+    content: '';
+
+    display: block;
+
+    margin-bottom: 16px;
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+
+  &--milk {
+    &::before {
+      width: 33px;
+      height: 50px;
+
+      background-image: url('../images/svg/milk.svg');
+    }
+  }
+
+  &--apples {
+    &::before {
+      width: 50px;
+      height: 50px;
+
+      background-image: url('../images/svg/apples.svg');
+    }
+  }
+
+  &--icecream {
+    &::before {
+      width: 44px;
+      height: 50px;
+
+      background-image: url('../images/svg/icecream.svg');
+    }
+  }
 }
 
 .advantages__item:not(:last-child) {
