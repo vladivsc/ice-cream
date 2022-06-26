@@ -1,0 +1,93 @@
+.advantages {
+  padding-top: 20px;
+  padding-bottom: 30px;
+
+  background-color: $secondary-bg-color;
+}
+
+.advantages__containet {
+  @extend .container;
+}
+
+.advantages__list {
+  @extend %list;
+  @extend %no-margin;
+
+  padding: 0;
+}
+
+.advantages__item {
+  width: 230px;
+
+  &::before {
+    content: '';
+
+    display: block;
+
+    margin-bottom: 16px;
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+
+  &--milk {
+    &::before {
+      width: 33px;
+      height: 50px;
+
+      background-image: url('../images/svg/milk.svg');
+    }
+  }
+
+  &--apples {
+    &::before {
+      width: 50px;
+      height: 50px;
+
+      background-image: url('../images/svg/apples.svg');
+    }
+  }
+
+  &--icecream {
+    &::before {
+      width: 44px;
+      height: 50px;
+
+      background-image: url('../images/svg/icecream.svg');
+    }
+  }
+}
+
+.advantages__item:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.advantages__icon {
+  display: block;
+
+  margin-bottom: 16px;
+
+  fill: $secondary-accen-color;
+}
+
+.advantages__quantity {
+  @extend %no-margin;
+
+  margin-bottom: 16px;
+
+  font-family: $secondary-font;
+  font-weight: 400;
+  @include font-size(36, 41);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+
+  color: $main-accent-color;
+}
+
+.advantages__text {
+  @extend %no-margin;
+
+  font-weight: 700;
+  @include font-size(12, 20);
+}
