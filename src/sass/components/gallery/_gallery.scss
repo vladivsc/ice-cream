@@ -5,6 +5,7 @@
 .grid-container {
     max-width: 1200px;
     left: 0;
+    padding: 0;
 }
 
 // .grid-sizer,
@@ -50,11 +51,16 @@
     transform-style: preserve-3d;
     transition: transform $transition-timing $transition-function;
 
+    &-min {
+        width: 44px;
+    }
+
     &:hover,
     &:focus {
         transform: rotateY(180deg);
         .grid-item__discriotion {
             z-index: 1;
+            cursor: pointer;
         }
     }
 }
@@ -91,7 +97,7 @@
 
 .grid-item__small-discription {
     width: 44px;
-    
+
 }
 
 .grid-section__img {
