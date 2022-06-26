@@ -1,0 +1,111 @@
+$padding: 35px;
+
+.customer-reviews {
+  @extend %list;
+
+  text-align: center;
+}
+
+.customer-reviews__photo {
+  margin-bottom: 32px;
+
+  width: 85px;
+  height: 85px;
+
+  border-radius: 44px;
+
+  @media (min-width: 772px) {
+    margin-bottom: 20px;
+  }
+
+  @media (min-width: 1200px) {
+    margin-bottom: 16px;
+  }
+}
+
+.customer-reviews__text-area {
+  position: relative;
+  
+  @include font-size(12, 30.6);
+
+  margin-bottom: 36px;
+  padding: $padding;
+
+  background-color: #fafafa;
+ 
+  @media screen and (min-width: 768px) and (max-width: 1199px){
+    @include font-size(14, 30.24);
+  }
+
+  @media (min-width: 1200px) {
+    @include font-size(16, 29.65);
+  }
+
+  &::before {
+    display: inline-block;
+    content: '';
+
+    width: 54px;
+    height: 40px;
+
+    position: absolute;
+    left: $padding;
+    top: 20px;
+
+    background-image: url(/src/images/svg/bracket.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  &::after {
+    content: '';
+
+    width: 32px;
+    height: 4px;
+
+    position: absolute;
+    bottom: -24px;
+    transform:translateX(-50%);
+
+    background-image: url(/src/images/svg/marker.svg);
+    background-size: contain;
+
+  }
+}
+
+.customer-reviews__content {
+  position: relative;
+
+  margin: 0;
+
+  background-image: repeating-linear-gradient(
+    #fafafa00,
+    #fafafa00 29.6px,
+    #e1e1e1 1px,
+    #e1e1e1 30.6px
+  );
+
+  @media (min-width: 1200px) {
+    background-image: repeating-linear-gradient(
+    #fafafa00,
+    #fafafa00 28.76px,
+    #e1e1e1 1px,
+    #e1e1e1 29.76px
+  );
+  }
+}
+
+.customer-reviews__location{
+  margin-bottom: 36px;
+
+  @include font-size (14, 26.05);
+  text-align: center;
+
+  @media (min-width: 768px) {
+    @include font-size(16, 29.76);
+  }
+
+  @media (min-width: 1200px) {
+    @include font-size(20, 37.2);
+  }
+}
