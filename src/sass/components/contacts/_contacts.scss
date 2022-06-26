@@ -38,12 +38,12 @@
 
   margin: auto;
   margin-bottom: 32px;
-
+  gap: 20px;
   @media screen and (min-width: 768px) {
     flex-wrap: nowrap;
     justify-content: center;
     display: flex;
-    gap: 32px;
+
     margin-bottom: 60px;
   }
 
@@ -51,13 +51,15 @@
     flex-wrap: wrap;
     justify-content: center;
     display: flex;
-    gap: 32px;
   }
 }
 
 .contact-card {
   @extend %no-margin;
   @extend %list;
+
+  margin-left: auto;
+  margin-right: auto;
 
   flex-direction: column;
   display: flex;
@@ -73,21 +75,16 @@
   background: #ffffff;
   box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
   border-radius: 24px;
-
-  @media screen and (min-width: 360px) {
-    width: calc((100% - 0px) / 1);
-  }
+  width: calc((100% - 40px) / 1);
 
   @media screen and (min-width: 768px) {
-    width: calc((100% - 94px) / 3);
-    width: 224px;
-
+    width: calc((100% - 32px) / 3);
+    margin: 0px;
     margin-bottom: 0px;
   }
   @media screen and (min-width: 1200px) {
     width: calc((100% - 94px) / 3);
     width: 368px;
-
     margin-bottom: 0px;
   }
 
@@ -318,7 +315,7 @@
     width: 162px;
 
     @media screen and (min-width: 768px) {
-      width: 174 px;
+      width: 174px;
     }
 
     @media screen and (min-width: 1280px) {
