@@ -19,4 +19,22 @@
 
     color: $main-accent-color;
   }
+
+  @media screen and (min-width: 768px) {
+    @include font-size(22, 25);
+
+    &--red {
+      @include font-size(34, 31);
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 24px;
+
+    @include font-size(38, 44);
+
+    &--red {
+      @include font-size(58, 52);
+    }
+  }
 }

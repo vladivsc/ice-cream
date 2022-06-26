@@ -7,6 +7,7 @@
   flex-direction: column;
   justify-content: center;
 
+  width: 100%;
   height: 502px;
   margin: 0 auto;
 
@@ -55,7 +56,6 @@
   justify-content: space-between;
 
   width: 100%;
-  max-width: 1200px;
 
   margin: 0 auto;
   padding-left: 20px;
@@ -71,6 +71,8 @@
   }
 
   @media screen and (min-width: 1200px) {
+    width: 1200px;
+
     padding-left: 16px;
     padding-right: 16px;
   }
@@ -87,6 +89,9 @@
 
   background: linear-gradient(to bottom, #ffb8caf5, #ffb8cab0 70%, #ffb8ca34);
   backdrop-filter: blur(6px);
+
+  box-shadow: 0px 1px 3px #e790a634, 0px 1px 1px #e790a634,
+    0px 2px 1px #e790a634;
 
   opacity: 0;
 
