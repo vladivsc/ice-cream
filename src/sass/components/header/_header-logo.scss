@@ -1,0 +1,16 @@
+.header__logo {
+  display: inline-block;
+
+  outline-offset: 4px;
+
+  transition: transform $transition-timing $transition-function;
+
+  &:hover,
+  &:focus {
+    transform: scale(1.05);
+  }
+}
+
+.header__logo-icon {
+  display: block;
+}

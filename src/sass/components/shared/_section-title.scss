@@ -15,7 +15,7 @@
     @include font-size(48, 55);
   }
 
-  @media screen and (min-width: 1280px) {
+  @media screen and (min-width: 1200px) {
     @include font-size(58, 66);
     letter-spacing: 0.06em;
   }
@@ -39,7 +39,7 @@
     @include font-size(26, 30);
   }
 
-  @media screen and (min-width: 1280px) {
+  @media screen and (min-width: 1200px) {
     margin-bottom: 16px;
 
     @include font-size(30, 34);
