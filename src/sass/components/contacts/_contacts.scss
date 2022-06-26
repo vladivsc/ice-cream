@@ -3,26 +3,29 @@
 
   background-image: linear-gradient(
     to bottom,
+    $main-bg-color,
     $main-bg-color 24%,
-    $secondary-bg-color 15%,
-    $secondary-bg-color 40%
+    $secondary-bg-color 24%,
+    $secondary-bg-color
   );
 
   @media screen and (min-width: 768px) {
     background-image: linear-gradient(
       to bottom,
-      $main-bg-color 43%,
-      $secondary-bg-color 15%,
-      $secondary-bg-color 40%
+      $main-bg-color,
+      $main-bg-color 40%,
+      $secondary-bg-color 40%,
+      $secondary-bg-color
     );
   }
 
   @media screen and (min-width: 1280px) {
     background-image: linear-gradient(
       to bottom,
+      $main-bg-color,
       $main-bg-color 20%,
-      $secondary-bg-color 15%,
-      $secondary-bg-color 40%
+      $secondary-bg-color 20%,
+      $secondary-bg-color
     );
   }
 }
@@ -85,160 +88,163 @@
     margin-bottom: 0px;
   }
 
-  &__title {
-    @extend %no-margin;
-
-    position: relative;
-    top: 1px;
-    z-index: 1;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    min-width: 80px;
-    margin-right: auto;
-    padding-left: 25px;
-    padding-right: 25px;
-
-    @include font-size(12, 16);
-    font-weight: 500;
-    letter-spacing: 0.04em;
-    color: $white-txt-color;
-
-    @media screen and (min-width: 768px) {
-      @include font-size(16, 30);
-      font-weight: 500;
-      letter-spacing: 0.04em;
-      padding-left: 18px;
-      padding-right: 18px;
-    }
-
-    &::before {
-      content: '';
-
-      position: absolute;
-      top: -1px;
-      z-index: -1;
-
-      width: 100%;
-      height: 100%;
-
-      border-radius: 4px;
-    }
-
-    &--brown {
-      &::before {
-        background: $card-brown-bg-color;
-      }
-    }
-
-    &--green {
-      &::before {
-        background: $card-green-bg-color;
-      }
-    }
-  }
-  &__item {
+  .contact-card__item {
+    @extend %list;
     padding: 0;
   }
+}
 
-  &__place {
-    @extend %no-margin;
-    @include font-size(12, 22);
+.contact-card__text {
+  @extend %no-margin;
+  @include font-size(12, 18);
 
-    margin-bottom: 8px;
+  max-width: 180px;
+
+  font-weight: 500;
+
+  color: $secondary-txt-color;
+
+  @media screen and (min-width: 768px) {
+    @include font-size(14, 23);
+  }
+
+  @media screen and (min-width: 1280px) {
+    @include font-size(16, 29);
+
+    max-width: 244px;
 
     letter-spacing: 0.04em;
+  }
+}
 
-    color: $main-txt-color;
+.contact-card__shedule-item {
+  max-width: 180px;
+}
 
-    @media screen and (min-width: 768px) {
-      @include font-size(14, 26);
-    }
+.contact-card__days {
+  @extend %no-margin;
+  @include font-size(12, 22);
 
-    @media screen and (min-width: 1280px) {
-      @include font-size(16, 30);
-    }
+  @media screen and (min-width: 768px) {
+    @include font-size(14, 26);
   }
 
-  &__text {
-    @extend %no-margin;
-    @include font-size(12, 18);
+  @media screen and (min-width: 1280px) {
+    @include font-size(16, 30);
+    letter-spacing: 0.04em;
+  }
+}
 
-    max-width: 180px;
+.contact-card__time {
+  @extend %no-margin;
 
+  @include font-size(12, 22);
+
+  color: $secondary-accen-color;
+
+  @media screen and (min-width: 768px) {
+    @include font-size(14, 26);
+  }
+
+  @media screen and (min-width: 1280px) {
+    @include font-size(16, 30);
+  }
+}
+
+.contact-card__link {
+  @extend %link-decor;
+
+  @include font-size(12, 18);
+
+  color: $secondary-txt-color;
+
+  transition: color $transition-timing $transition-function;
+
+  @media screen and (min-width: 768px) {
+    @include font-size(14, 26);
+  }
+
+  @media screen and (min-width: 1280px) {
+    @include font-size(16, 29);
+  }
+
+  &:hover,
+  &:focus {
+    color: $main-accent-color;
+  }
+}
+
+.contact-card__title {
+  @extend %no-margin;
+
+  position: relative;
+  top: 1px;
+  z-index: 1;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  min-width: 80px;
+  margin-right: auto;
+  padding-left: 25px;
+  padding-right: 25px;
+
+  @include font-size(12, 16);
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: $white-txt-color;
+
+  @media screen and (min-width: 768px) {
+    @include font-size(16, 30);
     font-weight: 500;
+    letter-spacing: 0.04em;
+    padding-left: 18px;
+    padding-right: 18px;
+  }
 
-    color: $secondary-txt-color;
+  &::before {
+    content: '';
 
-    @media screen and (min-width: 768px) {
-      @include font-size(14, 23);
-    }
+    position: absolute;
+    top: -1px;
+    z-index: -1;
 
-    @media screen and (min-width: 1280px) {
-      @include font-size(16, 29);
+    width: 100%;
+    height: 100%;
 
-      max-width: 244px;
+    border-radius: 4px;
+  }
 
-      letter-spacing: 0.04em;
+  &--brown {
+    &::before {
+      background: $card-brown-bg-color;
     }
   }
 
-  &__shedule-item {
-    max-width: 180px;
-  }
-
-  &__days {
-    @extend %no-margin;
-    @include font-size(12, 22);
-
-    @media screen and (min-width: 768px) {
-      @include font-size(14, 26);
-    }
-
-    @media screen and (min-width: 1280px) {
-      @include font-size(16, 30);
-      letter-spacing: 0.04em;
+  &--green {
+    &::before {
+      background: $card-green-bg-color;
     }
   }
+}
 
-  &__time {
-    @extend %no-margin;
+.contact-card__place {
+  @extend %no-margin;
+  @include font-size(12, 22);
 
-    @include font-size(12, 22);
+  margin-bottom: 8px;
 
-    color: $secondary-accen-color;
+  letter-spacing: 0.04em;
 
-    @media screen and (min-width: 768px) {
-      @include font-size(14, 26);
-    }
+  color: $main-txt-color;
 
-    @media screen and (min-width: 1280px) {
-      @include font-size(16, 30);
-    }
+  @media screen and (min-width: 768px) {
+    @include font-size(14, 26);
   }
-  &__link {
-    @extend %link-decor;
 
-    @include font-size(12, 18);
-
-    color: $secondary-txt-color;
-
-    transition: color $transition-timing $transition-function;
-
-    @media screen and (min-width: 768px) {
-      @include font-size(14, 26);
-    }
-
-    @media screen and (min-width: 1280px) {
-      @include font-size(16, 29);
-    }
-
-    &:hover,
-    &:focus {
-      color: $main-accent-color;
-    }
+  @media screen and (min-width: 1280px) {
+    @include font-size(16, 30);
   }
 }
 
