@@ -5,6 +5,14 @@
     <picture>
       <source
         srcset="
+          ./images/About/img-mobile.webp    1x,
+          ./images/About/img-mobile@2x.webp 2x,
+          ./images/About/img-mobile@3x.webp 3x
+        "
+        media="(max-width: 767px)"
+      />
+      <source
+        srcset="
           ./images/About/img-mobile.png    1x,
           ./images/About/img-mobile@2x.png 2x,
           ./images/About/img-mobile@3x.png 3x
@@ -15,6 +23,8 @@
         class="about__img"
         src="./images/About/img-mobile.png"
         alt="Зображена корова"
+        width="280"
+        height="279"
       />
     </picture>
     <div class="about__wrap">
@@ -32,7 +42,7 @@
         >
       </p>
       <button
-        class="about__btn button button--white_arrowed"
+        class="about__btn button button--white button--white_arrowed about__btn"
         id="open-button"
         type="button"
         data-modal-open
