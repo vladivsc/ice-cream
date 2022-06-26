@@ -33,9 +33,16 @@
 
   color: $white-txt-color;
 
+  transform-origin: left;
+
+  transition: color $transition-timing $transition-function,
+    transform $transition-timing $transition-function;
+
   &:hover,
   &:focus,
-  &.current {
+  &--current {
     color: $main-accent-color;
+
+    transform: scale(1.05);
   }
 }
