@@ -1,11 +1,14 @@
 .contact {
   @extend .section;
 
+  padding-top: 30px;
+  padding-bottom: 20px;
+
   background-image: linear-gradient(
     to bottom,
     $main-bg-color,
-    $main-bg-color 24%,
-    $secondary-bg-color 24%,
+    $main-bg-color 340px,
+    $secondary-bg-color 340px,
     $secondary-bg-color
   );
 
@@ -96,6 +99,7 @@
 
 .contact-card__text {
   @extend %no-margin;
+
   @include font-size(12, 18);
 
   max-width: 180px;
@@ -123,6 +127,7 @@
 
 .contact-card__days {
   @extend %no-margin;
+
   @include font-size(12, 22);
 
   @media screen and (min-width: 768px) {
@@ -154,11 +159,21 @@
 .contact-card__link {
   @extend %link-decor;
 
+  display: inline-block;
+
   @include font-size(12, 18);
 
   color: $secondary-txt-color;
 
-  transition: color $transition-timing $transition-function;
+  transition: color $transition-timing $transition-function,
+    transform $transition-timing $transition-function;
+
+  &:hover,
+  &:focus {
+    color: $main-accent-color;
+
+    transform: scale(1.1);
+  }
 
   @media screen and (min-width: 768px) {
     @include font-size(14, 26);
@@ -166,11 +181,6 @@
 
   @media screen and (min-width: 1280px) {
     @include font-size(16, 29);
-  }
-
-  &:hover,
-  &:focus {
-    color: $main-accent-color;
   }
 }
 
@@ -193,14 +203,14 @@
   @include font-size(12, 16);
   font-weight: 500;
   letter-spacing: 0.04em;
+
   color: $white-txt-color;
 
   @media screen and (min-width: 768px) {
-    @include font-size(16, 30);
-    font-weight: 500;
-    letter-spacing: 0.04em;
     padding-left: 18px;
     padding-right: 18px;
+
+    @include font-size(16, 30);
   }
 
   &::before {
@@ -267,48 +277,52 @@
 
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
 
   @media screen and (min-width: 768px) {
-    align-items: normal;
     flex-direction: row;
-    justify-content: center;
   }
 }
 
-.button--white_arrowed_length {
-  width: 170px;
-}
-
-.contact__buttons-tupe {
-  margin-bottom: 12px;
+.contact__button-container:not(:last-child) {
+  margin-bottom: 10px;
 
   @media screen and (min-width: 768px) {
-    margin-right: 14px;
     margin-bottom: 0px;
-  }
-}
-.contact__buttons-tupe:last-child {
-  margin-bottom: 0;
-  margin-right: 0;
-}
-
-.button--red__size {
-  @media screen and (min-width: 768px) {
-    width: 191px;
+    margin-right: 14px;
   }
 
-  @media screen and (min-width: 1280px) {
-    width: 198px;
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 0px;
+    margin-right: 12px;
   }
 }
 
-.button--white__size {
-  @media screen and (min-width: 768px) {
-    width: 174px;
+.contacts__button {
+  &--red {
+    width: 162px;
+    padding-left: 5px;
+    padding-right: 5px;
+
+    @media screen and (min-width: 768px) {
+      width: 192px;
+    }
+
+    @media screen and (min-width: 1280px) {
+      width: 198px;
+    }
   }
 
-  @media screen and (min-width: 1280px) {
-    width: 168px;
+  &--white {
+    width: 162px;
+
+    @media screen and (min-width: 768px) {
+      width: 174 px;
+    }
+
+    @media screen and (min-width: 1280px) {
+      width: 168px;
+    }
   }
 }
