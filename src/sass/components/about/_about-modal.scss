@@ -1,83 +1,80 @@
-
 .abaut-modal {
-   display: block;
-   max-width: 300px;
-   width: 100%;
-   min-height: 350px;
-   position: fixed;
-   z-index: 100;
-   left: 50%;
-   bottom: 60px;
-   transform: translateX(-50%) scale(1);
-   padding-right: 30px;
-   padding-left: 30px;
-   background: rgb(241, 235, 235);
-   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2) inset;
-   transition: transform $transition-timing $transition-function 100ms;
-   
-   @media screen and (max-width: 767px) {
-         background-image: url('../images/About/bg-mobile.png');
-         background-position: center;
-         background-size: contain;
-         background-repeat: no-repeat;
-   
-         @media (min-device-pixel-ratio: 2),
-         (min-resolution: 192dpi),
-         (min-resolution: 2dppx) {
-            & {
-               background-image: url('../images/About/bg-mobile@2x.png');
-            }
-         }
-   
-         @media (min-device-pixel-ratio: 3),
-         (min-resolution: 288dpi),
-         (min-resolution: 3dppx) {
-            & {
-               background-image: url('../images/About/bg-mobile@3x.png');
-            }
-         }
+  display: block;
+  max-width: 300px;
+  width: 100%;
+  min-height: 350px;
+  position: fixed;
+  z-index: 100;
+  left: 50%;
+  bottom: 60px;
+  transform: translateX(-50%) scale(1);
+  padding-right: 30px;
+  padding-left: 30px;
+  background: rgb(241, 235, 235);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2) inset;
+  transition: transform $transition-timing $transition-function 100ms;
+
+  @media screen and (max-width: 767px) {
+    background-image: url('../images/about/bg/bg-mobile.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      & {
+        background-image: url('../images/about/bg/bg-mobile@2x.png');
       }
+    }
+
+    @media (min-device-pixel-ratio: 3),
+      (min-resolution: 288dpi),
+      (min-resolution: 3dppx) {
+      & {
+        background-image: url('../images/about/bg/bg-mobile@3x.png');
+      }
+    }
+  }
 }
 
 .abaut-modal.is-hidden {
-   opacity: 0;
-   pointer-events: none;
-   visibility: hidden;
-   transform: translateX(-50%) scale(0.85);
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+  transform: translateX(-50%) scale(0.85);
 }
 
 .is-hidden .abaut-modal {
-   width: 55%;
+  width: 55%;
 }
 
 .abaut-modal__guts {
-   position: absolute;
-   top: 0;
-   left: 0;
- 
-   height: 100%;
-   border-top: 2px solid rgb(179, 99, 99);
-   border-bottom: 2px solid rgb(179, 99, 99);
-   overflow: auto;
-   padding: 30px 20px 30px 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  height: 100%;
+  border-top: 2px solid rgb(179, 99, 99);
+  border-bottom: 2px solid rgb(179, 99, 99);
+  overflow: auto;
+  padding: 30px 20px 30px 20px;
 }
 
 .abaut-modal__text {
-   margin: 0;
-   color: $secondary-txt-color;
+  margin: 0;
+  color: $secondary-txt-color;
 }
 
 .abaut-modal .abaut-modal__button-clos {
-   position: absolute;
-   z-index: 100;
-   bottom: -20px;
-   left: 50%;
+  position: absolute;
+  z-index: 100;
+  bottom: -20px;
+  left: 50%;
 
-   transform: translateX(-50%);
-   color: $main-accent-color;
-   background-color: #fff;
-   padding-left: 37px;
-   padding-right: 37px;
-   
+  transform: translateX(-50%);
+  color: $main-accent-color;
+  background-color: #fff;
+  padding-left: 37px;
+  padding-right: 37px;
 }
-
