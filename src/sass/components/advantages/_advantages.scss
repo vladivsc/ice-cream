@@ -14,6 +14,13 @@
   @extend %no-margin;
 
   padding: 0;
+
+  @media screen and (min-width: 768px) {
+
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+  }
 }
 
 .advantages__item {
@@ -29,7 +36,10 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
+
   }
+
+  
 
   &--milk {
     &::before {
@@ -57,10 +67,20 @@
       background-image: url('../images/svg/icecream.svg');
     }
   }
+  
+  
+@media screen and (max-width: 768px) {
+  &:not(:last-child) {
+    margin-bottom: 32px;
+  }
 }
 
-.advantages__item:not(:last-child) {
-  margin-bottom: 32px;
+@media screen and (min-width: 768px) {
+  width: 160px;
+  margin-right: 15px;
+  margin-bottom: 0px; 
+
+}
 }
 
 .advantages__icon {
@@ -83,6 +103,10 @@
   text-transform: uppercase;
 
   color: $main-accent-color;
+  @media screen and (min-width: 768px) {
+    @include font-size(48, 66);
+    text-transform: lowercase;
+  }
 }
 
 .advantages__text {
@@ -90,4 +114,9 @@
 
   font-weight: 700;
   @include font-size(12, 20);
+
+  
+  @media screen and (min-width: 768px) {
+    width: 160px;
+  }
 }
