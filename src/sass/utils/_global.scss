@@ -9,9 +9,7 @@ body {
   color: $main-txt-color;
   background-color: $main-bg-color;
 
-  @media screen and (max-width: 767.98px) {
-    &.mobile-menu-is-open {
-      overflow: hidden;
-    }
+  .modal-is-open {
+    overflow: hidden;
   }
 }
