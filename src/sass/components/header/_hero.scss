@@ -8,9 +8,15 @@
   flex-grow: 1;
 
   overflow: hidden;
+
+  @media screen and (min-width: 768px) {
+    justify-content: flex-start;
+  }
 }
 
 .hero__content-container {
+  display: flex;
+  justify-content: space-between;
   width: 100%;
 
   margin: 0 auto;
@@ -18,12 +24,104 @@
   padding-right: 20px;
 
   @media screen and (min-width: 768px) {
+    padding-top: 92px;
     padding-left: 32px;
     padding-right: 32px;
   }
 
   @media screen and (min-width: 1200px) {
+    padding-top: 152px;
     padding-left: 16px;
     padding-right: 16px;
+  }
+}
+
+.hero__content-title {
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    padding-top: 10px;
+  }
+}
+
+.hero__summary-container {
+  display: none;
+
+  @media screen and (min-width: 768px) {
+    display: block;
+  }
+}
+
+.hero__summary-list {
+  @extend %list;
+}
+
+.hero__summary-item {
+  position: relative;
+  z-index: 1;
+
+  padding-top: 3px;
+  padding-right: 8px;
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 5px;
+    padding-right: 16px;
+  }
+
+  &::before {
+    content: '';
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+
+    display: block;
+
+    width: 16px;
+    height: 16px;
+
+    background-color: $main-bg-color;
+    border-radius: 50%;
+
+    @media screen and (min-width: 1200px) {
+      width: 30px;
+      height: 30px;
+    }
+  }
+}
+
+.hero__summary-item:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+.hero__summary-count {
+  display: block;
+
+  font-family: $secondary-font;
+  font-weight: 400;
+  @include font-size(28, 32);
+
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+
+  color: $main-accent-color;
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 2px;
+
+    @include font-size(46, 53);
+  }
+}
+
+.hero__summary-text {
+  @extend %no-margin;
+
+  font-weight: 400;
+  @include font-size(8, 10);
+  text-align: right;
+
+  color: $white-txt-color;
+
+  @media screen and (min-width: 1200px) {
+    @include font-size(14, 18);
   }
 }
