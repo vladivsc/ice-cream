@@ -6,6 +6,10 @@ $padding: 35px;
   text-align: center;
 }
 
+.customer-reviews__item{
+  margin-bottom: 32px;
+}
+
 .customer-reviews__photo {
   margin-bottom: 32px;
 
@@ -96,7 +100,8 @@ $padding: 35px;
 }
 
 .customer-reviews__location{
-  margin-bottom: 36px;
+
+  margin: 0;
 
   @include font-size (14, 26.05);
   text-align: center;
@@ -109,3 +114,4 @@ $padding: 35px;
     @include font-size(20, 37.2);
   }
 }
+

@@ -1,0 +1,30 @@
+.swiper-container{
+  overflow: hidden;
+}
+
+.swiper-wrapper{
+  margin-bottom: 32px;
+}
+
+.swiper-pagination{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(100%);
+  
+}
+
+.swiper-pagination-bullet{
+  width: 12px;
+  height: 12px;
+}
+
+.swiper-pagination-bullet-active{
+  border-radius: 0;
+  width: 12px;
+  height: 9.82px;
+  background: none;
+  background-image: url(/src/images/svg/home.svg);
+  background-size: contain;
+}
