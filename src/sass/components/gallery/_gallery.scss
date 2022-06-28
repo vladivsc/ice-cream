@@ -1,7 +1,18 @@
 .gallery-section {
     padding-top: 30px;
     padding-bottom: 30px;
-    background: linear-gradient($secondary-bg-color, $secondary-bg-color 27%, $main-bg-color 27%, $main-bg-color);
+
+    @media screen and (max-width: 767px){
+            background: linear-gradient($secondary-bg-color, $secondary-bg-color 57px, $main-bg-color 57px, $main-bg-color);
+    }
+
+    @media screen and(min-width: 768px) and (max-width: 1199px){
+            background: linear-gradient($secondary-bg-color, $secondary-bg-color 187px, $main-bg-color 187px, $main-bg-color);
+    }
+    
+    @media screen and (min-width: 1200px) {
+             background: linear-gradient($secondary-bg-color, $secondary-bg-color 100px, $main-bg-color 100px, $main-bg-color);
+    }
 }
 
 .gallery-container {
@@ -12,17 +23,37 @@
 
 .gallery-sizer {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: flex-start;
 }
 
 .gallery-sizer__item {
-    width: 44px;    
-    margin: 1.25px;
+    @media screen and (max-width: 767px){
+        width: 44px;
+            margin: 1.25px;
+        
+            &--width {
+                width: 89px;
+            }
+    }
 
-    &--width {
-            width: 89px;
-        }
+    @media screen and(min-width: 768px) and (max-width: 1199px) {
+        width: 105px;
+            margin: 3px;
+        
+            &--width {
+                width: 215px;
+            }
+    }
+    
+    @media screen and (min-width: 1200px){
+        width: 138px;
+            margin: 4px;
+        
+            &--width {
+                width: 283px;
+            }
+    }
 
     &--first,
     &--last {
@@ -46,8 +77,23 @@
     transform-style: preserve-3d;
     transition: transform $transition-timing $transition-function;
 
-    &-min {
-        width: 44px;
+    @media screen and(max-width: 767px){
+        &-min {
+            width: 44px;
+            }
+    }
+    
+    @media screen and(min-width: 768px) and(max-width: 1199px) {
+        &-min {
+            width: 105px;
+        }
+    }
+
+    @media screen and(min-width: 1200px){
+        &-min {
+            width: 138px;
+
+        }
     }
 
     &:hover,
@@ -65,39 +111,127 @@
     top: 0;
     left: 0;
     background-color: $card-pink-bg-color;
-    width: 100%;
-    height: 100%;
+    
     display: flex;
     align-items: center;
     z-index: -1;
-    border-radius: 8px;
+    
     transform: rotateY(180deg);
     backface-visibility: hidden;
 
+    @media screen and (max-width: 767px) {
+       border-radius: 8px;
+        width: 100%;
+        height: 44px;
+    }
+
+    @media screen and(min-width: 768px) {
+        border-radius: 20px;
+        width: 100%;
+        height: 105;
+    }
+   
+    @media screen and(min-width: 1200px) {
+        
+    width: 100%;
+    height: 138px;
+    }
+    
+    &--large {
+        @media screen and (max-width: 767px) {
+                width: 100%;
+                height: 89px;
+            }
+        
+        @media screen and(min-width: 768px) and (max-width: 1199px) {
+                width: 100%;
+                height: 215px;
+            }
+
+        @media screen and(min-width: 1200px) {
+        
+                width: 100%;
+                height: 283px;
+            }
+    }
+
     .big-size {
+        @media screen and (max-width: 767px) {
             font-size: 30px;
+            
+        }
+
+         @media screen and(min-width: 768px) and (max-width: 1199px) {
+            font-size: 80px;
+            
+        }
+
+         @media screen and(min-width: 1200px) {
+            font-size: 100px;
+         }
+
             line-height: 24px;
             text-align: center;
             color: $white-txt-color;
             flex-basis: 100%;
     }
+
     p {
-        font-size: 16px;
-        line-height: 24px;
-        text-align: center;
-        color: $white-txt-color;
-        flex-basis: 100%;
+        @media screen and (max-width: 767px) {
+                font-size: 16px;
+        
+            }
+        
+        @media screen and(min-width: 768px) and (max-width: 1199px) {
+                font-size: 40px;
+        
+            }
+        
+        @media screen and(min-width: 1200px) {
+                font-size: 50px;
+            }
+        
+            line-height: 24px;
+            text-align: center;
+            color: $white-txt-color;
+            flex-basis: 100%;
     }
 }
 
 .gallery-item__small-discription {
-    width: 44px;
+    @media screen and(max-width: 767px){
+        width: 44px;
+    }
+    
+    @media screen and(min-width: 768px) and(max-width: 1199px){
+        width: 105px;
+    }
 
 }
 
 .gallery-section__img {
     display: block;
-    max-width: 100%;
+    // max-width: 100%;
     margin-bottom: 1px;
     border-radius: 8px;
+
+    @media screen and(max-width: 767px){
+            height: 44px;
+            width: 100%;
+
+            &--big-img {
+                    height: 89;
+                    width: 100%;
+                }
+        }
+
+    @media screen and(min-width: 768px) and(max-width: 1199px) {
+        height: 105px;
+        width: 100%;
+
+        &--big-img {
+                height: 215;
+                width: 100%;
+            }
+    }   
 }
