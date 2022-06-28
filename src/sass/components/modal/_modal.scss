@@ -67,6 +67,7 @@
 
   width: calc(100% - 30px);
   max-width: 480px;
+  max-height: 100vh;
   padding-top: 40;
   padding-bottom: 30px;
   padding-left: 20px;
@@ -76,6 +77,8 @@
 
   opacity: 0;
   visibility: hidden;
+
+  overflow-y: auto;
 
   transform: translate(-50%, -50%);
 
