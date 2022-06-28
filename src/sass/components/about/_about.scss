@@ -13,11 +13,34 @@
 .about__container {
   @extend .container;
 
-  background-position: bottom, center;
+  background-position: bottom calc(100% - 520px) right 50%;
   background-size: contain;
   background-repeat: no-repeat;
 
+  background-image: url('../images/about/bg/bg-mobile.png');
+  background-image: url('../images/about/bg/bg-mobile.webp');
+
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    & {
+      background-image: url('../images/about/bg/bg-mobile@2x.png');
+      background-image: url('../images/about/bg/bg-mobile@2x.webp');
+    }
+  }
+
+  @media (min-device-pixel-ratio: 3),
+    (min-resolution: 288dpi),
+    (min-resolution: 3dppx) {
+    & {
+      background-image: url('../images/about/bg/bg-mobile@3x.png');
+      background-image: url('../images/about/bg/bg-mobile@3x.webp');
+    }
+  }
+
   @media screen and (min-width: 1200px) {
+    background-position: bottom;
+
     background-image: url('../images/about/bg/bg-desktop.png');
     background-image: url('../images/about/bg/bg-desktop.webp');
 
@@ -93,38 +116,14 @@
 }
 
 .about__text-wrapper {
-  background-position: right 30%;
-  background-size: contain;
-  background-repeat: no-repeat;
-
-  background-image: url('../images/about/bg/bg-mobile.png');
-  background-image: url('../images/about/bg/bg-mobile.webp');
-
-  @media (min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi),
-    (min-resolution: 2dppx) {
-    & {
-      background-image: url('../images/about/bg/bg-mobile@2x.png');
-      background-image: url('../images/about/bg/bg-mobile@2x.webp');
-    }
-  }
-  @media (min-device-pixel-ratio: 3),
-    (min-resolution: 288dpi),
-    (min-resolution: 3dppx) {
-    & {
-      background-image: url('../images/about/bg/bg-mobile@3x.png');
-      background-image: url('../images/about/bg/bg-mobile@3x.webp');
-    }
-  }
-
   @media screen and (min-width: 768px) {
-    background: none;
-    margin-bottom: 0;
     max-width: 334px;
+    margin-bottom: 0;
   }
 
   @media screen and (min-width: 1200px) {
     @include font-size(14, 27);
+
     max-width: 390px;
     margin-top: 90px;
   }

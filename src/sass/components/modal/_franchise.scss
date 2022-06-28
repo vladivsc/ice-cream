@@ -47,7 +47,6 @@
   text-transform: uppercase;
 
   color: $mobile-menu-bg-color;
-  border-bottom: 1px solid #e1e1e1;
 }
 
 .franchise__contacts {
@@ -72,10 +71,14 @@
   margin-bottom: 10px;
 }
 
+.franchise__contacts-action {
+  display: block;
+}
+
 .franchise__contacts-link {
   @extend %link-decor;
 
-  display: block;
+  display: inline-block;
 
   @include font-size(14, 16);
 
