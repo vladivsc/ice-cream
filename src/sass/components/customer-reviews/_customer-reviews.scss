@@ -1,22 +1,24 @@
-$padding: 35px;
-
 .customer-reviews {
-  @extend %list;
+  padding-top: 30px;
+  padding-bottom: 40px;
+}
+
+.customer-reviews__container {
+  @extend .container;
 
   text-align: center;
 }
 
-.customer-reviews__item{
-  margin-bottom: 32px;
-}
-
 .customer-reviews__photo {
+  @extend .image;
+
   margin-bottom: 32px;
 
   width: 85px;
-  height: 85px;
+  margin-left: auto;
+  margin-right: auto;
 
-  border-radius: 44px;
+  border-radius: 50%;
 
   @media (min-width: 772px) {
     margin-bottom: 20px;
@@ -29,15 +31,15 @@ $padding: 35px;
 
 .customer-reviews__text-area {
   position: relative;
-  
+
   @include font-size(12, 30.6);
 
-  margin-bottom: 36px;
-  padding: $padding;
+  margin-bottom: 32px;
+  padding: 30px 50px;
 
   background-color: #fafafa;
- 
-  @media screen and (min-width: 768px) and (max-width: 1199px){
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
     @include font-size(14, 30.24);
   }
 
@@ -46,41 +48,30 @@ $padding: 35px;
   }
 
   &::before {
-    display: inline-block;
     content: '';
+
+    display: inline-block;
 
     width: 54px;
     height: 40px;
 
     position: absolute;
-    left: $padding;
-    top: 20px;
+    left: 50px;
+    top: 16px;
 
-    background-image: url(/src/images/svg/bracket.svg);
+    background-image: url('../images/svg/bracket.svg');
     background-repeat: no-repeat;
     background-size: contain;
-  }
-
-  &::after {
-    content: '';
-
-    width: 32px;
-    height: 4px;
-
-    position: absolute;
-    bottom: -24px;
-    transform:translateX(-50%);
-
-    background-image: url(/src/images/svg/marker.svg);
-    background-size: contain;
-
   }
 }
 
 .customer-reviews__content {
+  @extend %no-margin;
+
   position: relative;
 
-  margin: 0;
+  padding-left: 10px;
+  padding-right: 10px;
 
   background-image: repeating-linear-gradient(
     #fafafa00,
@@ -91,19 +82,18 @@ $padding: 35px;
 
   @media (min-width: 1200px) {
     background-image: repeating-linear-gradient(
-    #fafafa00,
-    #fafafa00 28.76px,
-    #e1e1e1 1px,
-    #e1e1e1 29.76px
-  );
+      #fafafa00,
+      #fafafa00 28.76px,
+      #e1e1e1 1px,
+      #e1e1e1 29.76px
+    );
   }
 }
 
-.customer-reviews__location{
+.customer-reviews__location {
+  @extend %no-margin;
 
-  margin: 0;
-
-  @include font-size (14, 26.05);
+  @include font-size(14, 26.05);
   text-align: center;
 
   @media (min-width: 768px) {
@@ -114,4 +104,3 @@ $padding: 35px;
     @include font-size(20, 37.2);
   }
 }
-

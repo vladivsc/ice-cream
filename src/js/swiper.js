@@ -5,6 +5,8 @@ var swiper = new Swiper('.swiper-container', {
   autoplay: {
     delay: 4000,
   },
+  disableOnInteraction: false,
+  pauseOnMouseEnter: true,
   loop: true,
   paginationClickable: true,
 
