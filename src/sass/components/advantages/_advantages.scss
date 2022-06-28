@@ -21,6 +21,14 @@
     flex-wrap: nowrap;
     justify-content: flex-start;
   }
+
+  @media screen and (min-width: 1200) {
+
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+  }
+
 }
 
 .advantages__item {
@@ -37,9 +45,14 @@
     background-position: center;
     background-size: contain;
 
+    @media screen and (min-width: 768px) {
+      margin-bottom: 30px; 
   }
 
-  
+    @media screen and (min-width: 1200px) {
+      margin-bottom: 40px; 
+    }
+  }
 
   &--milk {
     &::before {
@@ -77,9 +90,20 @@
 
 @media screen and (min-width: 768px) {
   width: 160px;
-  margin-right: 15px;
   margin-bottom: 0px; 
 
+  &:not(:last-child) {
+    margin-right: 15px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  width: 290px;
+  margin-bottom: 0px; 
+
+  &:not(:last-child) {
+    margin-right: 80px;
+  }
 }
 }
 
@@ -103,8 +127,14 @@
   text-transform: uppercase;
 
   color: $main-accent-color;
+
   @media screen and (min-width: 768px) {
     @include font-size(48, 66);
+    text-transform: lowercase;
+  }
+
+  @media screen and (min-width: 1200px) {
+    @include font-size(58, 66);
     text-transform: lowercase;
   }
 }
@@ -117,6 +147,10 @@
 
   
   @media screen and (min-width: 768px) {
-    width: 160px;
+    @include font-size(14, 24);
+  }
+
+  @media screen and (min-width: 1200px) {
+    @include font-size(16, 28);
   }
 }
