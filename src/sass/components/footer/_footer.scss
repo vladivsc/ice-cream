@@ -7,25 +7,24 @@
   background-color: $secondary-bg-color;
 
   @media screen and (min-width: 1200px) {
-    padding-top: 100px;
+    padding-top: 60px;
   }
 }
 
 .footer__container {
   @extend .container;
 
-  margin-bottom: 30px;
+  padding-bottom: 40px;
 
   @media screen and (min-width: 768px) {
     display: flex;
 
     padding-left: 16px;
     padding-right: 16px;
-    margin-bottom: 40px;
   }
 
   @media screen and (min-width: 1200px) {
-    margin-bottom: 60px;
+    padding-bottom: 60px;
   }
 }
 
@@ -84,10 +83,10 @@
   display: flex;
   justify-content: flex-end;
 
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 
   @media screen and (min-width: 768px) {
-    margin-bottom: 40px;
+    margin-bottom: 30px;
   }
 }
 
@@ -134,6 +133,7 @@
 
 .footer__contacts-text {
   margin-right: 4px;
+  padding-top: 20px;
 
   font-weight: 700;
   @include font-size(12, 22);
@@ -150,8 +150,7 @@
 .footer__contacts-link {
   @extend %link-decor;
 
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 20px;
 
   font-weight: 700;
   @include font-size(12, 22);
@@ -219,5 +218,8 @@
 
   @media screen and (min-width: 768px) {
     width: 278px;
+
+    @include font-size(14, 26);
+    letter-spacing: 0.02em;
   }
 }
