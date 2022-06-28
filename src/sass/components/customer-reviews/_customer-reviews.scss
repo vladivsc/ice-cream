@@ -45,7 +45,10 @@
   @include font-size(12, 30.6);
 
   margin-bottom: 32px;
-  padding: 30px 50px;
+  padding-top: 40px;
+  padding-bottom: 30px;
+  padding-left: 50px;
+  padding-right: 50px;
 
   background-color: #fafafa;
 
@@ -67,7 +70,7 @@
 
     position: absolute;
     left: 50px;
-    top: 16px;
+    top: 26px;
 
     background-image: url('../images/svg/bracket.svg');
     background-repeat: no-repeat;
