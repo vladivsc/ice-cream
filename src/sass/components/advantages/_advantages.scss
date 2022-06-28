@@ -16,6 +16,8 @@
 
 .advantages__containet {
   @extend .container;
+
+  overflow: hidden;
 }
 
 .advantages__list {
