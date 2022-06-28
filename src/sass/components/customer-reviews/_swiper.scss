@@ -1,0 +1,61 @@
+.swiper-container {
+  overflow: hidden;
+}
+
+.swiper-wrapper {
+  margin-bottom: 16px;
+}
+
+.swiper-pagination {
+  position: relative;
+  bottom: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding-top: 8px;
+
+  &::after {
+    content: '';
+
+    position: absolute;
+    left: 50%;
+    bottom: 94px;
+
+    width: 32px;
+    height: 4px;
+
+    transform: translateX(-50%);
+
+    background-image: url('../images/svg/marker.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    @media screen and (min-width: 768px) {
+      bottom: 102px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      bottom: 118px;
+    }
+  }
+}
+
+.swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+}
+
+.swiper-pagination-bullet-active {
+  width: 14px;
+  height: 12px;
+
+  background: none;
+  background-image: url('../images/svg/home.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+
+  border-radius: 0;
+}
