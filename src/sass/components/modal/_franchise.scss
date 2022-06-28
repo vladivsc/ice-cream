@@ -1,0 +1,139 @@
+.franchise__wrapper {
+  position: relative;
+}
+
+.franchise__list {
+  position: relative;
+
+  @extend %list;
+}
+
+.franchise__item {
+  display: flex;
+  flex-direction: column;
+
+  height: 100%;
+
+  opacity: 0;
+  pointer-events: none;
+
+  transition: opacity $transition-timing $transition-function;
+
+  &.franchise-is-visible {
+    opacity: 1;
+    pointer-events: initial;
+  }
+
+  &:last-child {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    height: 100%;
+  }
+}
+
+.franchise__title {
+  @extend %no-margin;
+
+  display: block;
+
+  margin-bottom: 12px;
+
+  text-align: center;
+
+  font-family: $main-font;
+  @include font-size(18, 24);
+  text-transform: uppercase;
+
+  color: $mobile-menu-bg-color;
+  border-bottom: 1px solid #e1e1e1;
+}
+
+.franchise__contacts {
+  list-style: circle;
+
+  flex-grow: 1;
+
+  margin-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  text-align: left;
+}
+
+.franchise__contacts-item {
+  @include font-size(16, 22);
+
+  color: $main-txt-color;
+}
+
+.franchise__contacts-item:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.franchise__contacts-link {
+  @extend %link-decor;
+
+  display: block;
+
+  @include font-size(14, 16);
+
+  color: $secondary-txt-color;
+
+  transition: color $transition-timing $transition-function,
+    transform $transition-timing $transition-function;
+
+  &:hover,
+  &:focus {
+    color: $main-accent-color;
+
+    transform: scale(1.02);
+  }
+}
+
+.franchise__img {
+  @extend .image;
+
+  border-radius: 24px;
+}
+
+.franchise__next-button {
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  z-index: 3;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 40px;
+  height: 40px;
+  margin-left: auto;
+  margin-right: auto;
+
+  color: $main-accent-color;
+  background-color: $secondary-bg-color;
+
+  border-radius: 50%;
+  cursor: pointer;
+
+  transform-origin: left;
+  transform: translateX(-50%);
+
+  transition: color $transition-timing $transition-function,
+    background-color $transition-timing $transition-function,
+    transform $transition-timing $transition-function;
+
+  &:hover {
+    color: $white-txt-color;
+    background-color: $main-accent-color;
+
+    transform: scale(1.05) translateX(-50%);
+  }
+}
+
+.franchise__next-button-icon {
+  fill: currentColor;
+}

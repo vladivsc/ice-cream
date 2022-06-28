@@ -104,20 +104,99 @@
       <div class="header__bg-icecream"></div>
       <div class="header__bg-girl"></div>
       <div class="hero__content-container">
-        <h1 class="hero__title">
-          Ice cream<br />made with<br />
-          <span class="hero__title--red">passion</span>
-        </h1>
-        <a
-          class="button button--red hero__button hero__button--red"
-          href="#products"
-          >Products</a
-        >
-        <a
-          class="button button--white hero__button hero__button--white"
-          href="#about"
-          >How it’s made?</a
-        >
+        <div class="hero__content-title">
+          <h1 class="hero__title">
+            Ice cream<br />made with<br />
+            <span class="hero__title--red">passion</span>
+          </h1>
+          <a
+            class="button button--red hero__button hero__button--red"
+            href="#products"
+            >Products</a
+          >
+          <a
+            class="button button--white hero__button hero__button--white"
+            href="#about"
+            >How it’s made?</a
+          >
+        </div>
+        <div class="hero__summary-container">
+          <ul class="hero__summary-list">
+            <li class="hero__summary-item">
+              <p class="hero__summary-text">
+                <span class="hero__summary-count">16</span>cafes
+              </p>
+            </li>
+            <li class="hero__summary-item">
+              <p class="hero__summary-text">
+                <span class="hero__summary-count">23</span>food trucks
+              </p>
+            </li>
+          </ul>
+        </div>
+        <div class="hero__about">
+          <div class="hero__about-image-wrapper">
+            <picture>
+              <source
+                media="(min-width: 1200px)"
+                srcset="
+                  ./images/header/milk/desktop/milk.webp    1x,
+                  ./images/header/milk/desktop/milk@2x.webp 2x,
+                  ./images/header/milk/desktop/milk@3x.webp 3x
+                "
+                type="image/webp"
+              />
+              <source
+                media="(min-width: 1200px)"
+                srcset="
+                  ./images/header/milk/desktop/milk.png    1x,
+                  ./images/header/milk/desktop/milk@2x.png 2x,
+                  ./images/header/milk/desktop/milk@3x.png 3x
+                "
+              />
+              <source
+                srcset="
+                  ./images/header/milk/tablet/milk.webp    1x,
+                  ./images/header/milk/tablet/milk@2x.webp 2x,
+                  ./images/header/milk/tablet/milk@3x.webp 3x
+                "
+                type="image/webp"
+              />
+              <source
+                srcset="
+                  ./images/header/milk/tablet/milk.png    1x,
+                  ./images/header/milk/tablet/milk@2x.png 2x,
+                  ./images/header/milk/tablet/milk@3x.png 3x
+                "
+              />
+              <img
+                class="hero__about-image"
+                src="./images/header/milk/tablet/milk.png"
+                alt="Pitcher of milk"
+                width="152"
+                height="154"
+                loading="lazy"
+              />
+            </picture>
+          </div>
+          <div class="hero__about-container">
+            <div class="hero__about-text-container">
+              <p class="hero__about-text" data-hero-about-text>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et
+              </p>
+              <p class="hero__about-description" data-hero-about-description>
+                <span class="hero__about-description-title">Description:</span>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              </p>
+            </div>
+            <div class="hero__about-button" data-hero-about-button>
+              <svg class="hero__about-button-icon" width="8" height="8">
+                <use href="./images/svg/sprite.svg#arrow-right"></use>
+              </svg>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   </div>

@@ -19,8 +19,6 @@
     }
 
     refs.buyBtn.classList.toggle('disabled');
-
-    document.body.classList.toggle('mobile-menu-is-open');
   });
 
   refs.mobileMenuList.addEventListener('click', () => {
@@ -31,7 +29,5 @@
     refs.mobileMenuBtn.classList.toggle('is-open');
     refs.mobileMenu.classList.toggle('is-open');
     refs.buyBtn.classList.toggle('disabled');
-
-    document.body.classList.toggle('mobile-menu-is-open');
   });
 })();
