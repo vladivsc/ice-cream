@@ -9,7 +9,7 @@ body {
   color: $main-txt-color;
   background-color: $main-bg-color;
 
-  .modal-is-open {
+  &.modal-is-open {
     overflow: hidden;
   }
 }
