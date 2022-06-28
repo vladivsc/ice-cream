@@ -211,14 +211,14 @@
 
 .gallery-section__img {
     display: block;
-    // max-width: 100%;
     margin-bottom: 1px;
-    border-radius: 8px;
+    border-radius: 20px;
 
     @media screen and(max-width: 767px){
             height: 44px;
             width: 100%;
-
+            border-radius: 8px;
+            
             &--big-img {
                     height: 89;
                     width: 100%;
