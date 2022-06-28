@@ -1,0 +1,46 @@
+.hero__button {
+  position: relative;
+  z-index: 2;
+
+  font-weight: 400;
+
+  @media screen and (max-width: 1199.98px) {
+    height: 24px;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    @include font-size(8, 10);
+
+    &--red {
+      min-width: 62px;
+    }
+
+    &--white {
+      min-width: 82px;
+    }
+
+    &:not(:last-child) {
+      margin-right: 4px;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    height: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    @include font-size(14, 18);
+
+    &--red {
+      min-width: 107px;
+    }
+
+    &--white {
+      min-width: 138px;
+    }
+
+    &:not(:last-child) {
+      margin-right: 8px;
+    }
+  }
+}

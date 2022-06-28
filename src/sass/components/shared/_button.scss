@@ -22,7 +22,8 @@
 
   cursor: pointer;
 
-  transition: background-color $transition-timing $transition-function;
+  transition: background-color $transition-timing $transition-function,
+    transform $transition-timing $transition-function;
 
   &--white {
     color: $main-accent-color;
@@ -31,6 +32,8 @@
     &:hover,
     &:focus {
       background-color: $button-white-hover-bg-color;
+
+      transform: scale(1.05);
     }
 
     &_arrowed {
@@ -58,6 +61,8 @@
     &:hover,
     &:focus {
       background-color: $button-red-hover-bg-color;
+
+      transform: scale(1.05);
     }
 
     &_arrowed {

@@ -1,0 +1,308 @@
+.hero {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-grow: 1;
+
+  overflow: hidden;
+
+  @media screen and (min-width: 768px) {
+    padding-bottom: 16px;
+
+    justify-content: flex-start;
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding-bottom: 60px;
+  }
+}
+
+.hero__content-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  @media screen and (min-width: 768px) {
+    padding-top: 92px;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 152px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+.hero__content-title {
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    padding-top: 10px;
+  }
+}
+
+.hero__summary-container {
+  display: none;
+
+  @media screen and (min-width: 768px) {
+    display: block;
+  }
+}
+
+.hero__summary-list {
+  @extend %list;
+}
+
+.hero__summary-item {
+  position: relative;
+  z-index: 1;
+
+  padding-top: 3px;
+  padding-right: 8px;
+
+  cursor: pointer;
+
+  transition: transform $transition-timing $transition-function;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 5px;
+    padding-right: 16px;
+  }
+
+  &::before {
+    content: '';
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+
+    display: block;
+
+    width: 16px;
+    height: 16px;
+
+    background-color: $main-bg-color;
+    border-radius: 50%;
+
+    @media screen and (min-width: 1200px) {
+      width: 30px;
+      height: 30px;
+    }
+  }
+}
+
+.hero__summary-item:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+.hero__summary-count {
+  display: block;
+
+  font-family: $secondary-font;
+  font-weight: 400;
+  @include font-size(28, 32);
+
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+
+  color: $main-accent-color;
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 2px;
+
+    @include font-size(46, 53);
+  }
+}
+
+.hero__summary-text {
+  @extend %no-margin;
+
+  font-weight: 400;
+  @include font-size(8, 10);
+  text-align: right;
+
+  color: $white-txt-color;
+
+  @media screen and (min-width: 1200px) {
+    @include font-size(14, 18);
+  }
+}
+
+.hero__about {
+  position: absolute;
+  left: 32px;
+  bottom: 16px;
+  z-index: 2;
+
+  display: flex;
+
+  width: 266px;
+
+  @media screen and (max-width: 767.98px) {
+    display: none;
+  }
+
+  @media screen and (min-width: 1200px) {
+    left: 16px;
+    bottom: 60px;
+
+    width: 413px;
+  }
+}
+
+.hero__about-image-wrapper {
+  flex-basis: 152px;
+  flex-grow: 0;
+  flex-shrink: 0;
+
+  @media screen and (min-width: 1200px) {
+    flex-basis: 213px;
+  }
+}
+
+.hero__about-image {
+  @extend .image;
+
+  width: 152px;
+  height: 154px;
+
+  @media screen and (min-width: 1200px) {
+    width: 213px;
+    height: 216px;
+  }
+}
+
+.hero__about-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-grow: 0;
+
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.hero__about-text-container {
+  position: relative;
+
+  margin-bottom: 7px;
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 20px;
+  }
+}
+
+.hero__about-text {
+  @extend %no-margin;
+
+  @include font-size(8, 12);
+
+  color: $white-txt-color;
+
+  transition: opacity $transition-timing $transition-function;
+
+  &.is-text-invisible {
+    opacity: 0;
+  }
+
+  @media screen and (min-width: 1200px) {
+    @include font-size(14, 20);
+  }
+}
+
+.hero__about-description {
+  @extend %no-margin;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  @include font-size(8, 12);
+
+  color: $white-txt-color;
+
+  opacity: 0;
+
+  pointer-events: none;
+
+  transition: opacity $transition-timing $transition-function;
+
+  &.is-description-visible {
+    opacity: 1;
+  }
+
+  @media screen and (min-width: 1200px) {
+    @include font-size(14, 20);
+  }
+}
+
+.hero__about-description-title {
+  display: block;
+
+  margin-bottom: 6px;
+
+  font-family: $secondary-font;
+  font-weight: 400;
+  @include font-size(10, 12);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+
+  color: $main-accent-color;
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 10px;
+
+    @include font-size(14, 16);
+  }
+}
+
+.hero__about-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 18px;
+  height: 18px;
+
+  color: $main-accent-color;
+  background-color: $main-bg-color;
+  border-radius: 50%;
+
+  cursor: pointer;
+
+  transition: transform $transition-timing $transition-function,
+    color $transition-timing $transition-function,
+    background-color $transition-timing $transition-function;
+
+  &.is-about-button-hovered {
+    color: $white-txt-color;
+    background-color: $main-accent-color;
+
+    transform: rotate(-90deg) scale(1.2);
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 26px;
+    height: 26px;
+  }
+}
+
+.hero__about-button-icon {
+  fill: currentColor;
+
+  @media screen and (min-width: 1200px) {
+    width: 10px;
+    height: 10px;
+  }
+}

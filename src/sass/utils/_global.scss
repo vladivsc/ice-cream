@@ -8,4 +8,8 @@ body {
   font-weight: 500;
   color: $main-txt-color;
   background-color: $main-bg-color;
+
+  &.modal-is-open {
+    overflow: hidden;
+  }
 }
