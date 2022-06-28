@@ -1,3 +1,7 @@
+.franchise__wrapper {
+  position: relative;
+}
+
 .franchise__list {
   position: relative;
 
@@ -5,8 +9,6 @@
 }
 
 .franchise__item {
-  position: relative;
-
   display: flex;
   flex-direction: column;
 
@@ -21,12 +23,14 @@
     opacity: 1;
     pointer-events: initial;
   }
-}
 
-.franchise__item:last-child {
-  position: absolute;
-  top: 0;
-  left: 0;
+  &:last-child {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    height: 100%;
+  }
 }
 
 .franchise__title {
@@ -84,7 +88,7 @@
   &:focus {
     color: $main-accent-color;
 
-    transform: scale(1.05);
+    transform: scale(1.02);
   }
 }
 
@@ -96,7 +100,7 @@
 
 .franchise__next-button {
   position: absolute;
-  bottom: 10px;
+  bottom: -20px;
   left: 50%;
   z-index: 3;
 
@@ -110,9 +114,8 @@
   margin-right: auto;
 
   color: $main-accent-color;
-  background-color: $main-bg-color;
+  background-color: $secondary-bg-color;
 
-  border: 1px solid #e1e1e1;
   border-radius: 50%;
   cursor: pointer;
 
