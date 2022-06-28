@@ -1,0 +1,37 @@
+.about-modal-bg {
+  background-position: bottom;
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  background-image: url('../images/modal/about/plant-cow.png');
+  background-image: url('../images/modal/about/plant-cow.webp');
+
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    & {
+      background-image: url('../images/modal/about/plant-cow@2x.png');
+      background-image: url('../images/modal/about/plant-cow@2x.webp');
+    }
+  }
+
+  @media (min-device-pixel-ratio: 3),
+    (min-resolution: 288dpi),
+    (min-resolution: 3dppx) {
+    & {
+      background-image: url('../images/modal/about/plant-cow@3x.png');
+      background-image: url('../images/modal/about/plant-cow@3x.webp');
+    }
+  }
+}
+
+.about-modal__text {
+  @extend %no-margin;
+
+  color: $secondary-txt-color;
+  margin-bottom: 20px;
+
+  &:last-child {
+    margin-bottom: 50%;
+  }
+}

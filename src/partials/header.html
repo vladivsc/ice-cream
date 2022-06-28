@@ -53,11 +53,9 @@
             </span>
           </button>
           <button
-            class="button button--white button--white_arrowed header__buy-button"
+            class="button button--white button--white_arrowed header__buy-button js-open-modal"
+            data-modal="buy"
             type="button"
-            aria-expanded="false"
-            aria-controls="!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
-            data-buy-button
           >
             <strong>Buy now</strong>
           </button>
@@ -69,10 +67,9 @@
         >
           <div class="mobile-menu__container">
             <button
-              class="button button--white button--white_arrowed mobile-menu__buy-button"
+              class="button button--white button--white_arrowed mobile-menu__buy-button js-open-modal"
+              data-modal="buy"
               type="button"
-              aria-expanded="false"
-              aria-controls="!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
             >
               <strong>Buy now</strong>
             </button>
@@ -124,12 +121,20 @@
           <ul class="hero__summary-list">
             <li class="hero__summary-item">
               <p class="hero__summary-text">
-                <span class="hero__summary-count">16</span>cafes
+                <span
+                  class="hero__summary-count js-open-modal"
+                  data-modal="franchise"
+                  >16</span
+                >cafes
               </p>
             </li>
             <li class="hero__summary-item">
               <p class="hero__summary-text">
-                <span class="hero__summary-count">23</span>food trucks
+                <span
+                  class="hero__summary-count js-open-modal"
+                  data-modal="franchise"
+                  >23</span
+                >food trucks
               </p>
             </li>
           </ul>

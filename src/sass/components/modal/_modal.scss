@@ -82,6 +82,31 @@
 
   transform: translate(-50%, -50%);
 
+  background-position: top 10% right 50%;
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  background-image: url('../images/about/bg/bg-mobile.png');
+  background-image: url('../images/about/bg/bg-mobile.webp');
+
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    & {
+      background-image: url('../images/about/bg/bg-mobile@2x.png');
+      background-image: url('../images/about/bg/bg-mobile@2x.webp');
+    }
+  }
+
+  @media (min-device-pixel-ratio: 3),
+    (min-resolution: 288dpi),
+    (min-resolution: 3dppx) {
+    & {
+      background-image: url('../images/about/bg/bg-mobile@3x.png');
+      background-image: url('../images/about/bg/bg-mobile@3x.webp');
+    }
+  }
+
   border-radius: 24px;
   background-color: $main-bg-color;
   box-shadow: 0 10px 10px -0.5px rgba(228, 109, 139, 0.2);
