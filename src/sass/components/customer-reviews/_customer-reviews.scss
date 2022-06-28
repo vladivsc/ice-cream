@@ -1,0 +1,119 @@
+.customer-reviews {
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+  @media screen and (min-width: 768px) {
+    padding-top: 35px;
+    padding-bottom: 40px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+
+.customer-reviews__container {
+  @extend .container;
+
+  text-align: center;
+}
+
+.customer-reviews__photo {
+  @extend .image;
+
+  margin-bottom: 32px;
+
+  width: 85px;
+  margin-left: auto;
+  margin-right: auto;
+
+  border-radius: 50%;
+
+  @media (min-width: 772px) {
+    margin-bottom: 20px;
+  }
+
+  @media (min-width: 1200px) {
+    margin-bottom: 16px;
+  }
+}
+
+.customer-reviews__text-area {
+  position: relative;
+
+  @include font-size(12, 30.6);
+
+  margin-bottom: 32px;
+  padding-top: 40px;
+  padding-bottom: 30px;
+  padding-left: 50px;
+  padding-right: 50px;
+
+  background-color: #fafafa;
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    @include font-size(14, 30.24);
+  }
+
+  @media (min-width: 1200px) {
+    @include font-size(16, 29.65);
+  }
+
+  &::before {
+    content: '';
+
+    display: inline-block;
+
+    width: 54px;
+    height: 40px;
+
+    position: absolute;
+    left: 50px;
+    top: 26px;
+
+    background-image: url('../images/svg/bracket.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
+
+.customer-reviews__content {
+  @extend %no-margin;
+
+  position: relative;
+
+  padding-left: 10px;
+  padding-right: 10px;
+
+  background-image: repeating-linear-gradient(
+    #fafafa00,
+    #fafafa00 29.6px,
+    #e1e1e1 1px,
+    #e1e1e1 30.6px
+  );
+
+  @media (min-width: 1200px) {
+    background-image: repeating-linear-gradient(
+      #fafafa00,
+      #fafafa00 28.76px,
+      #e1e1e1 1px,
+      #e1e1e1 29.76px
+    );
+  }
+}
+
+.customer-reviews__location {
+  @extend %no-margin;
+
+  @include font-size(14, 26.05);
+  text-align: center;
+
+  @media (min-width: 768px) {
+    @include font-size(16, 29.76);
+  }
+
+  @media (min-width: 1200px) {
+    @include font-size(20, 37.2);
+  }
+}
