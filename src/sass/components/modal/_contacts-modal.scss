@@ -1,14 +1,14 @@
-.franchise__wrapper {
+.contacts__wrapper {
   position: relative;
 }
 
-.franchise__list {
+.contacts__list {
   position: relative;
 
   @extend %list;
 }
 
-.franchise__item {
+.contacts__item {
   display: flex;
   flex-direction: column;
 
@@ -19,21 +19,21 @@
 
   transition: opacity $transition-timing $transition-function;
 
-  &.franchise-is-visible {
+  &.contacts-is-visible {
     opacity: 1;
     pointer-events: initial;
   }
 
-  &:last-child {
+  &:not(:first-child) {
     position: absolute;
     top: 0;
     left: 0;
 
-    height: 100%;
+    width: 100%;
   }
 }
 
-.franchise__title {
+.contacts__title {
   @extend %no-margin;
 
   display: block;
@@ -49,7 +49,7 @@
   color: $mobile-menu-bg-color;
 }
 
-.franchise__contacts {
+.contacts__contacts {
   list-style: circle;
 
   flex-grow: 1;
@@ -61,21 +61,21 @@
   text-align: left;
 }
 
-.franchise__contacts-item {
+.contacts__contacts-item {
   @include font-size(16, 22);
 
   color: $main-txt-color;
 }
 
-.franchise__contacts-item:not(:last-child) {
+.contacts__contacts-item:not(:last-child) {
   margin-bottom: 10px;
 }
 
-.franchise__contacts-action {
+.contacts__contacts-action {
   display: block;
 }
 
-.franchise__contacts-link {
+.contacts__contacts-link {
   @extend %link-decor;
 
   display: inline-block;
@@ -95,13 +95,13 @@
   }
 }
 
-.franchise__img {
-  @extend .image;
+.contacts__map {
+  border-radius: 16px;
 
-  border-radius: 24px;
+  width: 100%;
 }
 
-.franchise__next-button {
+.contacts__next-button {
   position: absolute;
   bottom: -20px;
   left: 50%;
@@ -137,6 +137,6 @@
   }
 }
 
-.franchise__next-button-icon {
+.contacts__next-button-icon {
   fill: currentColor;
 }
