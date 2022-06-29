@@ -94,6 +94,8 @@
 }
 
 .gallery__item-sale {
+  position: relative;
+
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
 
@@ -120,8 +122,6 @@
   align-items: center;
 
   background-color: $card-pink-bg-color;
-
-  outline: 1px solid $card-pink-bg-color;
 
   transform: rotateY(180deg);
 
