@@ -1,16 +1,20 @@
-html,
-body {
+html {
   scroll-behavior: smooth;
 }
 
 body {
+  width: 100vw;
+
   font-family: $main-font;
   font-weight: 500;
   color: $main-txt-color;
   background-color: $main-bg-color;
 
+  overflow-x: hidden;
+  overflow-y: auto;
+
   &.modal-is-open {
-    overflow: hidden;
+    overflow-y: hidden;
   }
 }
 
