@@ -6,8 +6,8 @@
 
   background: linear-gradient(
     $secondary-bg-color,
-    $secondary-bg-color 57px,
-    $main-bg-color 57px,
+    $secondary-bg-color 59px,
+    $main-bg-color 59px,
     $main-bg-color
   );
 
@@ -17,8 +17,8 @@
 
     background: linear-gradient(
       $secondary-bg-color,
-      $secondary-bg-color 220px,
-      $main-bg-color 220px,
+      $secondary-bg-color 222px,
+      $main-bg-color 222px,
       $main-bg-color
     );
   }
@@ -29,8 +29,8 @@
 
     background: linear-gradient(
       $secondary-bg-color,
-      $secondary-bg-color 150px,
-      $main-bg-color 150px,
+      $secondary-bg-color 152px,
+      $main-bg-color 152px,
       $main-bg-color
     );
   }
@@ -39,40 +39,82 @@
 .gallery__container {
   @extend .container;
 
-  padding-left: 0;
-  padding-right: 0;
-}
-
-.gallery__sizer {
   display: flex;
   justify-content: center;
   align-items: flex-start;
 
   max-width: 320px;
-  margin-right: auto;
-  margin-left: auto;
+  padding-left: 0;
+  padding-right: 0;
 
   @media screen and (min-width: 768px) {
     max-width: 768px;
   }
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 1200px) {
     max-width: 1013px;
   }
 }
 
 .gallery__sizer-item {
-  &--first,
-  &--last {
-    transform: translateY(100%);
+  &--a {
+    transform: translateY(45px);
+
+    @media screen and (min-width: 768px) {
+      transform: translateY(108px);
+    }
+
+    @media screen and (min-width: 1200px) {
+      transform: translateY(142px);
+    }
   }
 
-  &--second {
-    transform: translateY(25%);
+  &--b {
+    transform: translateY(28px);
+
+    @media screen and (min-width: 768px) {
+      transform: translateY(67px);
+    }
+
+    @media screen and (min-width: 1200px) {
+      transform: translateY(88px);
+    }
   }
 
-  &--third {
-    transform: translateY(15%);
+  &--d {
+    transform: translateY(31px);
+
+    @media screen and (min-width: 768px) {
+      transform: translateY(75px);
+    }
+
+    @media screen and (min-width: 1200px) {
+      transform: translateY(99px);
+    }
+  }
+
+  &--e {
+    transform: translateY(21px);
+
+    @media screen and (min-width: 768px) {
+      transform: translateY(50px);
+    }
+
+    @media screen and (min-width: 1200px) {
+      transform: translateY(66px);
+    }
+  }
+
+  &--f {
+    transform: translateY(49px);
+
+    @media screen and (min-width: 768px) {
+      transform: translateY(117px);
+    }
+
+    @media screen and (min-width: 1200px) {
+      transform: translateY(155px);
+    }
   }
 }
 
