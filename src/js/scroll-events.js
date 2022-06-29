@@ -24,7 +24,7 @@
     contactsMobileLink: document.querySelector('[data-contacts-mobile-link]'),
   };
 
-  function deactivateAll() {
+  const deactivateAll = () => {
     if (refs.homeLink.classList.contains('is-active')) {
       refs.homeLink.classList.remove('is-active');
     }
@@ -55,9 +55,9 @@
     if (refs.contactsMobileLink.classList.contains('is-active')) {
       refs.contactsMobileLink.classList.remove('is-active');
     }
-  }
+  };
 
-  window.onscroll = () => {
+  const scrollEvents = () => {
     const pageOffset = window.pageYOffset;
 
     if (pageOffset > refs.header.offsetTop) {
@@ -113,5 +113,13 @@
       refs.homeLink.classList.add('is-active');
       refs.homeMobileLink.classList.add('is-active');
     }
+  };
+
+  window.onload = () => {
+    scrollEvents();
+  };
+
+  window.onscroll = () => {
+    scrollEvents();
   };
 })();

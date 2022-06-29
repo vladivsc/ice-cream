@@ -5,10 +5,14 @@
 
   background-color: $secondary-bg-color;
 
-  background-position: bottom calc(100% - 600px) left,
-    bottom calc(100% - 600px) right;
+  background-position: top calc(100% - 150px) left, top calc(100% - 150px) right;
   background-size: 146px, 146px;
   background-repeat: no-repeat;
+
+  @media screen and (max-width: 346px) {
+    background-position: top calc(100% - 175px) left,
+      top calc(100% - 175px) right;
+  }
 
   background-image: url('../images/about/bg/mobile/bg-mobile-left.png'),
     url('../images/about/bg/mobile/bg-mobile-right.png');

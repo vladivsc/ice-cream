@@ -46,9 +46,11 @@
       rel="stylesheet"
       href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
     />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link rel="stylesheet" href="./sass/index.scss" />
   </head>
   <body>
+    <!-- PARTIALS -->
     <include src="./partials/header.html"></include>
     <main>
       <include src="./partials/products.html"></include>
@@ -60,6 +62,8 @@
     </main>
     <include src="./partials/footer.html"></include>
     <include src="./partials/modal.html"></include>
+
+    <!-- JS -->
     <script type="module" src="./js/scroll-events.js"></script>
     <script type="module" src="./js/mobile-menu.js"></script>
     <script type="module" src="./js/modal.js"></script>
@@ -69,5 +73,7 @@
     <script type="module" src="./js/hero-more.js"></script>
     <script type="module" src="./js/products-more.js"></script>
     <script src="./js/swiper-bundle-min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="./js/aos-init.js"></script>
   </body>
 </html>
