@@ -40,7 +40,7 @@
 
   &:hover,
   &:focus,
-  &--current {
+  &.is-active {
     color: $main-accent-color;
 
     transform: scale(1.05);
