@@ -89,6 +89,16 @@
   &--reduced {
     width: 50%;
   }
+
+  padding: 1px;
+
+  @media screen and(min-width: 768px) {
+    padding: 3px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding: 4px;
+  }
 }
 
 .gallery__item-sale {
@@ -101,16 +111,6 @@
   backface-visibility: hidden;
 
   transition: transform $transition-timing $transition-function;
-
-  margin: 1px;
-
-  @media screen and(min-width: 768px) {
-    margin: 3px;
-  }
-
-  @media screen and (min-width: 1200px) {
-    margin: 4px;
-  }
 }
 
 .gallery__item-description {
