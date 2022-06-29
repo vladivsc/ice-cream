@@ -38,6 +38,8 @@
 
   display: block;
 
+  flex-grow: 1;
+
   margin-bottom: 12px;
 
   text-align: center;
@@ -51,8 +53,6 @@
 
 .contacts__contacts {
   list-style: circle;
-
-  flex-grow: 1;
 
   margin-bottom: 20px;
   padding-left: 20px;
