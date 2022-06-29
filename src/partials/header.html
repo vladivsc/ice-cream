@@ -12,19 +12,29 @@
           <nav class="header__navigation head-nav">
             <ul class="head-nav__list">
               <li class="head-nav__item">
-                <a class="head-nav__link" href="#home">Home</a>
+                <a class="head-nav__link is-active" href="#home" data-home-link
+                  >Home</a
+                >
               </li>
               <li class="head-nav__item">
-                <a class="head-nav__link" href="#products">Our products</a>
+                <a class="head-nav__link" href="#products" data-products-link
+                  >Our products</a
+                >
               </li>
               <li class="head-nav__item">
-                <a class="head-nav__link" href="#about">How it's made?</a>
+                <a class="head-nav__link" href="#about" data-about-link
+                  >How it's made?</a
+                >
               </li>
               <li class="head-nav__item">
-                <a class="head-nav__link" href="#gallery">Gallery</a>
+                <a class="head-nav__link" href="#gallery" data-gallery-link
+                  >Gallery</a
+                >
               </li>
               <li class="head-nav__item">
-                <a class="head-nav__link" href="#contacts">Contact</a>
+                <a class="head-nav__link" href="#contacts" data-contacts-link
+                  >Contact</a
+                >
               </li>
             </ul>
           </nav>
@@ -54,9 +64,9 @@
           </button>
           <button
             class="button button--white button--white_arrowed header__buy-button js-open-modal"
-            type="button"
             data-modal="buy"
             data-buy-button
+            type="button"
           >
             <strong>Buy now</strong>
           </button>
@@ -70,6 +80,7 @@
             <button
               class="button button--white button--white_arrowed mobile-menu__buy-button js-open-modal"
               data-modal="buy"
+              data-mobile-menu-buy
               type="button"
             >
               <strong>Buy now</strong>
@@ -77,19 +88,41 @@
             <nav class="mobile-menu__navigation mob-nav">
               <ul class="mob-nav__list" data-mobile-menu-list>
                 <li class="mob-nav__item">
-                  <a class="mob-nav__link" href="#home">Home</a>
+                  <a
+                    class="mob-nav__link is-active"
+                    href="#home"
+                    data-home-mobile-link
+                    >Home</a
+                  >
                 </li>
                 <li class="mob-nav__item">
-                  <a class="mob-nav__link" href="#products">Our products</a>
+                  <a
+                    class="mob-nav__link"
+                    href="#products"
+                    data-products-mobile-link
+                    >Our products</a
+                  >
                 </li>
                 <li class="mob-nav__item">
-                  <a class="mob-nav__link" href="#about">How it’s made?</a>
+                  <a class="mob-nav__link" href="#about" data-about-mobile-link
+                    >How it’s made?</a
+                  >
                 </li>
                 <li class="mob-nav__item">
-                  <a class="mob-nav__link" href="#gallery">Gallery</a>
+                  <a
+                    class="mob-nav__link"
+                    href="#gallery"
+                    data-gallery-mobile-link
+                    >Gallery</a
+                  >
                 </li>
                 <li class="mob-nav__item">
-                  <a class="mob-nav__link" href="#contacts">Contact</a>
+                  <a
+                    class="mob-nav__link"
+                    href="#contacts"
+                    data-contacts-mobile-link
+                    >Contact</a
+                  >
                 </li>
               </ul>
             </nav>

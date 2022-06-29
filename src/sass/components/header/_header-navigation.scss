@@ -38,7 +38,8 @@
     transform $transition-timing $transition-function;
 
   &:hover,
-  &:focus {
+  &:focus,
+  &.is-active {
     color: $main-accent-color;
 
     transform: scale(1.05);
