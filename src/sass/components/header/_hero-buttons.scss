@@ -1,7 +1,9 @@
-.hero__button {
+.hero__button-wrapper {
   position: relative;
   z-index: 2;
+}
 
+.hero__button {
   font-weight: 400;
 
   @media screen and (max-width: 1199.98px) {

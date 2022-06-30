@@ -1,5 +1,7 @@
 .mob-nav__list {
   @extend %list;
+
+  margin-bottom: 40px;
 }
 
 .mob-nav__item {

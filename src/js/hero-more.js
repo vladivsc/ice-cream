@@ -10,6 +10,7 @@
     refs.heroAboutDesc.classList.add('is-description-visible');
     refs.heroAboutBtn.classList.add('is-about-button-hovered');
   });
+
   refs.heroAboutBtn.addEventListener('mouseout', () => {
     refs.heroAboutTxt.classList.remove('is-text-invisible');
     refs.heroAboutDesc.classList.remove('is-description-visible');

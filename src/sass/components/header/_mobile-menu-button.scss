@@ -1,8 +1,15 @@
+.header__mobile-button-wrapper {
+  position: relative;
+  z-index: 190;
+}
+
 .mobile-menu-button {
   position: relative;
   z-index: 2;
 
   display: inline-flex;
+  justify-content: center;
+  align-items: center;
 
   padding-top: 16px;
   padding-bottom: 16px;
@@ -20,6 +27,15 @@
   &:hover,
   &:focus {
     transform: translateX(8px) scale(1.15);
+  }
+
+  &.is-open {
+    width: 40px;
+    height: 40px;
+    padding: 0;
+
+    border-radius: 50%;
+    background-color: #e17992c0;
   }
 
   @media screen and (min-width: 768px) {
