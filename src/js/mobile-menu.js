@@ -7,38 +7,38 @@
     mobileBuyBtn: document.querySelector('[data-mobile-menu-buy]'),
   };
 
-  refs.mobileMenuBtn.addEventListener('click', () => {
+  const toggleMenu = () => {
     const expanded =
       refs.mobileMenuBtn.getAttribute('aria-expanded') === 'true' || false;
     refs.mobileMenuBtn.setAttribute('aria-expanded', !expanded);
 
     refs.mobileMenuBtn.classList.toggle('is-open');
-
     refs.mobileMenu.classList.toggle('is-open');
+    refs.buyBtn.classList.toggle('disabled');
+  };
+
+  refs.mobileMenuBtn.addEventListener('click', () => {
+    toggleMenu();
+
     if (refs.mobileMenu.classList.contains('is-open')) {
       refs.mobileMenu.scrollTo(top);
     }
-
-    refs.buyBtn.classList.toggle('disabled');
   });
 
-  refs.mobileMenuList.addEventListener('click', () => {
-    const expanded =
-      refs.mobileMenuBtn.getAttribute('aria-expanded') === 'true' || false;
-    refs.mobileMenuBtn.setAttribute('aria-expanded', !expanded);
+  refs.mobileMenuList.addEventListener('click', () => toggleMenu());
 
-    refs.mobileMenuBtn.classList.toggle('is-open');
-    refs.mobileMenu.classList.toggle('is-open');
-    refs.buyBtn.classList.toggle('disabled');
-  });
+  refs.mobileBuyBtn.addEventListener('click', () => toggleMenu());
 
-  refs.mobileBuyBtn.addEventListener('click', () => {
-    const expanded =
-      refs.mobileMenuBtn.getAttribute('aria-expanded') === 'true' || false;
-    refs.mobileMenuBtn.setAttribute('aria-expanded', !expanded);
+  document.body.addEventListener('mouseup', e => {
+    let menu = refs.mobileMenu;
+    let menuBtn = refs.mobileMenuBtn;
+    let target = e.target;
+    let its_menu = target == menu || menu.contains(target);
+    let its_menuBtnClose = target == menuBtn || menuBtn.contains(target);
+    let menu_is_active = menu.classList.contains('is-open');
 
-    refs.mobileMenuBtn.classList.toggle('is-open');
-    refs.mobileMenu.classList.toggle('is-open');
-    refs.buyBtn.classList.toggle('disabled');
+    if (!its_menu && !its_menuBtnClose && menu_is_active) {
+      toggleMenu();
+    }
   });
 })();
