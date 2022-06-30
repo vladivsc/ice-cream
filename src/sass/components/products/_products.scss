@@ -255,8 +255,16 @@
     }
   }
 
-  &:hover .products__card-container {
+  &:hover .products__card-container--icecream {
     box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.3);
+  }
+
+  &:hover .products__card-container--coffee {
+    box-shadow: 0px 8px 30px rgba(202, 126, 19, 0.4);
+  }
+
+  &:hover .products__card-container--milkshakes {
+    box-shadow: 0px 8px 30px rgba(123, 202, 20, 0.4);
   }
 }
 
