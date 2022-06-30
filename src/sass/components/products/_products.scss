@@ -458,13 +458,16 @@
 
   transition: color $transition-timing $transition-function,
     background-color $transition-timing $transition-function,
-    transform $transition-timing $transition-function;
+    transform $transition-timing $transition-function,
+    box-shadow $transition-timing $transition-function;
 
   &.is-hovered {
     color: $white-txt-color;
     background-color: $main-accent-color;
 
     transform: rotate(-90deg) scale(1.1);
+
+    box-shadow: 4px 4px 14px 1px rgba(0, 0, 0, 0.2);
   }
 }
 

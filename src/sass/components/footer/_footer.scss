@@ -115,13 +115,16 @@
   border-radius: 50%;
 
   transition: background-color $transition-timing $transition-function,
-    transform $transition-timing $transition-function;
+    transform $transition-timing $transition-function,
+    box-shadow $transition-timing $transition-function;
 
   &:hover,
   &:focus {
     background-color: $main-accent-color;
 
     transform: scale(1.2);
+
+    box-shadow: 4px 4px 14px 1px rgba(0, 0, 0, 0.2);
   }
 }
 

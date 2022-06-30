@@ -190,6 +190,9 @@
 
   background-color: #fff;
 
+  pointer-events: none;
+  user-select: none;
+
   @media screen and (min-width: 768px) {
     display: block;
 
