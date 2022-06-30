@@ -11,7 +11,7 @@
 }
 
 .modal-form__group {
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 .modal-form__text {
@@ -19,9 +19,15 @@
 
   padding-left: 5px;
 
-  @include font-size(14, 20);
+  @include font-size(13, 16);
 
-  color: $main-accent-color;
+  color: $secondary-txt-color;
+}
+
+.modal-form__input-container {
+  position: relative;
+
+  display: block;
 }
 
 .modal-form__input {
@@ -29,22 +35,23 @@
 
   width: 100%;
 
-  padding-top: 7px;
-  padding-bottom: 7px;
-  padding-left: 10px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-left: 40px;
   padding-right: 10px;
 
-  border: 1px solid $main-accent-color;
+  @include font-size(14, 20);
+
+  border: 1px solid $secondary-accen-color;
   border-radius: 6px;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 
   outline: transparent;
-  background-color: transparent;
+  background-color: $main-bg-color;
 
   cursor: pointer;
 
   transition: background-color $transition-timing $transition-function,
-    transform $transition-timing $transition-function,
     border-color $transition-timing $transition-function,
     box-shadow $transition-timing $transition-function;
 
@@ -52,9 +59,33 @@
   &:focus {
     background-color: $secondary-bg-color;
     border-color: $main-accent-color;
-    transform: scale(1.02);
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
       rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  }
+
+  &::placeholder {
+    @include font-size(14, 20);
+
+    color: rgba(180, 17, 55, 0.4);
+  }
+}
+
+.modal-form__icon {
+  position: absolute;
+  top: 50%;
+  left: 13px;
+
+  color: $secondary-txt-color;
+  fill: currentColor;
+  transform: translateY(-50%);
+
+  transition: color $transition-timing $transition-function,
+    transform $transition-timing $transition-function;
+
+  .modal-form__group:focus-within & {
+    color: $main-accent-color;
+
+    transform: translateY(-50%);
   }
 }
 
@@ -63,12 +94,14 @@
 
   width: 100%;
 
-  padding: 12px 16px;
+  padding: 8px 10px;
   margin-bottom: 10px;
+
+  @include font-size(14, 20);
 
   resize: none;
 
-  border: 1px solid $main-accent-color;
+  border: 1px solid $secondary-accen-color;
   border-radius: 6px;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 
@@ -78,21 +111,19 @@
   cursor: pointer;
 
   transition: background-color $transition-timing $transition-function,
-    transform $transition-timing $transition-function,
     border-color $transition-timing $transition-function,
     box-shadow $transition-timing $transition-function;
 
   &::placeholder {
     @include font-size(14, 20);
 
-    color: rgba(180, 17, 55, 0.5);
+    color: rgba(180, 17, 55, 0.4);
   }
 
   &:hover,
   &:focus {
     background-color: $secondary-bg-color;
     border-color: $main-accent-color;
-    transform: scale(1.02);
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
       rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
   }

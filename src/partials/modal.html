@@ -5,22 +5,56 @@
     </svg>
   </button>
   <p class="modal__title">Send your request</p>
-  <form class="form">
+  <form class="form" autocomplete="off">
     <label class="modal-form__group">
       <span class="modal-form__text">Name</span>
-      <input type="text" class="modal-form__input" name="user-name" />
+      <span class="modal-form__input-container">
+        <input
+          class="modal-form__input"
+          name="name"
+          type="text"
+          placeholder="John Smith"
+          minlength="3"
+          required
+        />
+        <svg class="modal-form__icon" width="18" height="18">
+          <use href="./images/svg/sprite.svg#person"></use>
+        </svg>
+      </span>
     </label>
 
     <label class="modal-form__group">
       <span class="modal-form__text">Phone</span>
-      <input type="tel" class="modal-form__input" name="user-phone" />
+      <span class="modal-form__input-container">
+        <input
+          class="modal-form__input"
+          name="phone"
+          type="tel"
+          minlength="8"
+          placeholder="+380597895234"
+          required
+        />
+        <svg class="modal-form__icon" width="18" height="18">
+          <use href="./images/svg/sprite.svg#phone"></use>
+        </svg>
+      </span>
     </label>
 
     <label class="modal-form__group">
       <span class="modal-form__text">Email</span>
-      <input type="email" class="modal-form__input" name="user-email" />
+      <span class="modal-form__input-container">
+        <input
+          class="modal-form__input"
+          name="email"
+          type="email"
+          placeholder="joht.smith@mymail.com"
+          required
+        />
+        <svg class="modal-form__icon" width="18" height="18">
+          <use href="./images/svg/sprite.svg#email"></use>
+        </svg>
+      </span>
     </label>
-
     <label class="modal-form__group-textarea">
       <span class="modal-form__text">Comments</span>
       <textarea
