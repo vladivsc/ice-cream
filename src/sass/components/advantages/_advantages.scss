@@ -1,4 +1,6 @@
 .advantages {
+  @extend .section;
+
   padding-top: 20px;
   padding-bottom: 30px;
 
@@ -23,9 +25,11 @@
   @extend %no-margin;
 
   padding: 0;
+  overflow: hidden;
 
   @media screen and (min-width: 768px) {
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
 
     margin: -8px;
