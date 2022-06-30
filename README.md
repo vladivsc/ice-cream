@@ -1,6 +1,7 @@
 # Project fifteen
 
-## Dudka Volodymyr, ### Dnipro Team Lead
+## Dudka Volodymyr, Dnipro - Team Lead
+Dudka Volodymyr, Dnipro - Team Lead
 
 
 ##
