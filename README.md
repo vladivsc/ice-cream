@@ -1,12 +1,11 @@
-**Read in other languages: [Русский](README.md), [Polski](README.pl.md).**
+# Project fifteen
 
-# Parcel template
+## Dudka Volodymyr, Dnipro
+### Team Lead
 
-Этот проект был создан при помощи Parcel. Для знакомства и настройки
-дополнительных возможностей [обратись к документации](https://parceljs.org/).
 
-## Подготовка нового проекта
-
+##
+###
 1. Убедись что на компьютере установлена LTS-версия Node.js.
    [Скачай и установи](https://nodejs.org/en/) её если необходимо.
 2. Склонируй этот репозиторий.
