@@ -4,12 +4,17 @@
       <div class="header__fixed-bar-wrapper">
         <div class="header__blur-container" data-header-blur-container></div>
         <div class="header__navigation-container">
-          <a class="header__logo" href="#home" aria-label="Logotype Icecream">
+          <a
+            class="header__logo"
+            href="#home"
+            aria-label="Logotype Icecream"
+            data-aos="zoom-in-down"
+          >
             <svg class="header__logo-icon" width="199" height="50">
               <use href="./images/svg/sprite.svg#logo"></use>
             </svg>
           </a>
-          <nav class="header__navigation head-nav">
+          <nav class="header__navigation head-nav" data-aos="zoom-in-down">
             <ul class="head-nav__list">
               <li class="head-nav__item">
                 <a class="head-nav__link is-active" href="#home" data-home-link
@@ -39,7 +44,7 @@
             </ul>
           </nav>
         </div>
-        <div class="header__buttons-container">
+        <div class="header__buttons-container" data-aos="zoom-in-down">
           <button
             class="header__mobile-menu-button mobile-menu-button"
             type="button"
@@ -177,24 +182,34 @@
       <div class="header__bg-circle"></div>
       <div class="header__bg-icecream"></div>
       <div class="header__bg-girl"></div>
+      <div class="header__bg-girl-text" aria-hidden="true">
+        <span class="header__bg-girl-subtext header__bg-girl-subtext--top"
+          >soooooo</span
+        >
+        <span class="header__bg-girl-subtext header__bg-girl-subtext--bottom"
+          >tasty!</span
+        >
+      </div>
       <div class="hero__content-container">
         <div class="hero__content-title">
-          <h1 class="hero__title">
+          <h1 class="hero__title" data-aos="zoom-in-down">
             Ice cream<br />made with<br />
             <span class="hero__title--red">passion</span>
           </h1>
           <a
             class="button button--red hero__button hero__button--red"
             href="#products"
+            data-aos="zoom-in-down"
             >Products</a
           >
           <a
             class="button button--white hero__button hero__button--white"
             href="#about"
+            data-aos="zoom-in-down"
             >How it’s made?</a
           >
         </div>
-        <div class="hero__summary-container">
+        <div class="hero__summary-container" data-aos="zoom-in-down">
           <ul class="hero__summary-list">
             <li class="hero__summary-item">
               <p class="hero__summary-text">
@@ -216,7 +231,7 @@
             </li>
           </ul>
         </div>
-        <div class="hero__about">
+        <div class="hero__about" data-aos="zoom-in-up">
           <div class="hero__about-image-wrapper">
             <picture>
               <source
